@@ -1,0 +1,66 @@
+<!--
+	作者：1173795632@qq.com
+	时间：2020-05-14
+	描述：@keyframes规则
+	要创建 CSS3 动画，你需要了解 @keyframes 规则。
+	@keyframes 规则是创建动画。
+	@keyframes 规则内指定一个 CSS 样式和动画将逐步从目前的样式更改为新的样式。
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>零玖玖教育 - ljj.cn </title>
+    <meta name="author" content="零玖玖教育 - ljj.cn">
+    <meta name="copyright" content="零玖玖教育 - ljj.cn">
+    <meta name="description" content="零玖玖教育，是一家专注的前端开发培训的公司，是目前培训行业中最具口碑的机构。我们向学员提供了JavaScript、nodeJs、AngularJS、jQuery、HTML+CSS、HTML5+CSS3，移动端等课程。">
+    <style>
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: yellowgreen;
+            /*transition: 谁（要动的属性） 时间  延时（可选） 运动方式（linear、ease...）;*/
+            /*animation: js中的函数名  时间  延时（可选） 运动方式（linear、ease...）;*/
+            animation: move 5s;
+        }
+        /*-wekbit-@keyframes move {}*/
+        @keyframes move {
+            /*从哪儿*/
+            from{
+                width: 100px;
+            }
+            /*到哪儿*/
+            to{
+                width: 300px;
+            }
+        }
+
+        
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!--
+        transition: 一次动画   需要我们手动的去触发它
+        animation: 多次动画（可重复动画）  可以让他自己执行。
+    -->
+</body>
+</html>

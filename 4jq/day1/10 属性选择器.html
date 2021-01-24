@@ -1,0 +1,53 @@
+<!--
+	作者：1173795632@qq.com
+	时间：2020-05-04
+	描述：属性选择器
+	a只是标签，所有标签都可以
+	$(“a[href]”)	选择所有包含href属性的元素	$(“a[href]”). css(“background”,”red”)
+	$(“a[href=’itcast’]”)	选择href属性值为itcast的所有a标签	$(“a[href=’itcast’]”). css(“background”,”red”)
+	$(“a[href!=’baidu’]”)	选择所有href属性不等baidu的所有元素，包括没有href的元素	$(“a[href!=’baidu’]”). css(“background”,”red”)
+	$(“a[href^=’web’]”)	选择所有以web开头的元素	$(“a[href^=’web’]”). css(“background”,”red”)
+	$(“a[href$=’cn’]”)	选择所有以cn结尾的元素	$(“a[href$=’cn’]”). css(“background”,”red”)
+	$(“a[href*=’i’]”)	选择所有包含i这个字符的元素，可以是中英文	$(“a[href*=’i’]”). css(“background”,”red”)
+	$(“a[href][title=’我’]”)	选择所有符合指定属性规则的元素，都符合才会被选中。	$(“a[href][title=’我’]”). css(“background”,”red”)
+-->
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="jquery-1.11.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // 属性选择器
+            /*$("a[href]").css("color","red");*/
+
+            // [attr=value]
+            //$("a[href='http://web.itcast.cn']").css("font-size","40px");
+
+            // [attr!=value]
+            //$("a[href!='http://www.baidu.com']").css("font-size","40px");
+
+            // [attr^=value]
+            //$("a[href^='http']").css("font-size","40px");
+
+            // [attr$=value]
+            //$("a[href$='cn']").css("font-size","40px");
+
+            // [attr*=value]
+            //$("a[href*='it']").css("font-size","40px");
+
+            // [attr][attr] 都满足 交集
+            $("a[href][title*='的']").css("font-size","40px");
+        });
+    </script>
+</head>
+<body>
+    <div class="divItem">
+        <a href="www.baidu.com" title="谁啊？">百度</a>
+        <a href="http://web.itcast.cn" title="我是title的内容">前端移动</a>
+        <a href="http://sina.com.cn">新浪</a>
+        <a>我没有href</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!--
+	作者：1173795632@qq.com
+	时间：2020-05-04
+	描述：stop
+	$(selector).stop(stopAll,goToEnd);
+-->
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script>
+		$(document).ready(function() {
+			$("button").click(function() {
+				$("p").hide("slow", function() {
+					alert("段落现在被隐藏了");
+				});
+			});
+		});
+	</script>
+
+	<body>
+	</body>
+
+</html>

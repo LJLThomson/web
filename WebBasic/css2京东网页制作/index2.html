@@ -1,0 +1,43 @@
+<!--
+	作者：1173795632@qq.com
+	时间：2020-04-13
+	描述：float
+	浮动，都是相对旁边的浮动，如果左浮动就相对左边，右浮动，就相对右边
+	2、当浮动超过时，首先相对上级浮动，上次盒子空间不够，依次类推，最后另起一行
+-->
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0 auto;
+				padding: 0;
+			}
+			.box1{
+				width: 300px;
+				height: 30px;
+				background: #0000FF;
+				float: left;
+			}
+			.box2{
+				width: 1600px;
+				height: 30px;
+				background: #FF0000;
+				float: left;
+			}
+			.box3{
+				width: 300px;
+				height: 30px;
+				background: yellowgreen;
+				float: right;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box1">box1</div>
+		<div class="box2">box2</div>
+		<div class="box3">box3</div>
+	</body>
+</html>

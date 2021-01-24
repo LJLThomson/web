@@ -1,0 +1,61 @@
+<!--
+	作者：1173795632@qq.com
+	时间：2020-04-11
+	描述：zoom用法
+	当设置了zoom的值之后，所设置的元素就会就会扩大或者缩小，高度宽度就会重新计算了，这里一旦改变zoom值时其实也会发生重新渲染，运用这个原理，也就解决了ie下子元素浮动时候父元素不随着自动扩大的问题
+	用法：ie下子元素浮动时候父元素不随着自动扩大的问题，使用下面的CSS写法
+	.父元素 {   overflow: auto; zoom: 1   },
+-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+ 		.news{
+ 			width: 400px;
+ 			height: 100px;
+ 			border: 1px solid #000;
+ 			margin: 100px;
+ 			overflow: hidden;
+ 			_zoom:1;
+ 		}
+ 		.news ul{
+ 			list-style: none;
+ 		}
+ 		.news ul li{
+ 			overflow: hidden;
+ 			_zoom:1;
+ 			border-bottom: 1px dashed gray;
+ 		}
+ 		.news ul li span.title{
+ 			float: left;
+ 		}
+ 		.news ul li span.date{
+ 			float: right;
+ 		}
+	</style>
+</head>
+<body>
+	<div class="news">
+		<ul>
+			<li>
+				<span class="title">哈哈哈哈哈哈哈哈</span>
+				<span class="date">2015年10月24日</span>
+			</li>
+			<li>
+				<span class="title">嘻嘻嘻嘻嘻</span>
+				<span class="date">2015年10月24日</span>
+			</li>
+			<li>
+				<span class="title">呜呜呜呜呜呜呜</span>
+				<span class="date">2015年10月24日</span>
+			</li>
+		</ul>
+	</div>
+</body>
+</html>

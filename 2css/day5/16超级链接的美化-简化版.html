@@ -1,0 +1,64 @@
+<!--
+	作者：1173795632@qq.com
+	时间：2020-04-11
+	描述：超级链接美化
+	a标签在使用的时候，非常的难。因为不仅仅要控制a这个盒子，也要控制它的伪类。
+	1、我们一定要将a标签写在前面，:link、:visited、:hover、:active这些伪类写在后面。
+	a标签中，描述盒子； 伪类中描述文字的样式、背景。
+	2、最标准的，就是把link、visited、hover都要写。但是前端开发工程师在大量的实践中，发现不写link、visited浏览器也挺兼容
+a:link、a:visited都是可以省略的，简写在a标签里面。也就是说，a标签涵盖了link、visited的状态。
+-->
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			.nav{
+				width: 960px;
+				height: 50px;
+				border: 1px solid red;
+				margin: 100px auto;
+			}
+			.nav li{
+				list-style: none;
+			}
+			.nav ul li{
+				float:left;
+				width: 120px;
+				height: 50px;
+				text-align: center;
+				line-height: 50px;
+			}
+			.nav ul li {
+				display: block;
+				width: 120px;
+				height: 50px;
+				text-decoration: none;
+				background-color: purple;
+				color: white;
+			}
+			.nav ul li a:hover{ /*简化版本 可以兼容*/
+				background-color: orange;
+			}
+		</style>
+	</head>
+	<body>
+			<div class="nav">
+		<ul>
+			<li><a href="#">网站栏目</a></li>
+			<li><a href="#">网站栏目</a></li>
+			<li><a href="#">网站栏目</a></li>
+			<li><a href="#">网站栏目</a></li>
+			<li><a href="#">网站栏目</a></li>
+			<li><a href="#">网站栏目</a></li>
+			<li><a href="#">网站栏目</a></li>
+			<li><a href="#">网站栏目</a></li>
+		</ul>
+	</div>
+	</body>
+</html>

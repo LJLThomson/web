@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			//构造方式创建对象
+			function pgsj(){
+				this.size = '5';
+				this.color = '土豪金';
+				this.weight = '200g';
+				this.call = function(){
+					alert('能打电话！');
+				};
+			//下面是一种错误的写法，是木有set 和get方法的
+//				function suj(){
+//					alert('开始吧');
+//				}
+			}
+	
+//			2
+			var iphone9 = new pgsj();
+			iphone9.call = function(){ 
+				alert('哈哈');
+			}
+			iphone9.call();
+//			3
+//		和Java有些不同的地方，便是，将方法也当做了属性call，在java中方法对象.method(),通过set和get得到修改的属性值
+//		但在JavaScript中，方法可以被修改
+			var iphone9s = new pgsj();
+			iphone9s.weight = '300g';
+			alert(iphone9s.weight);
+			iphone9s.call = function(){
+				alert('哈哈');
+			}
+			iphone9s.call();
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

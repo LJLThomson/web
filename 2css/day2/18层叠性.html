@@ -1,0 +1,51 @@
+<!--
+	作者：1173795632@qq.com
+	时间：2020-04-10
+	描述：层叠选择器
+	通配符：0
+	伪元素：1
+	元素选择器：1
+	class选择器：10
+	伪类：10
+	属性选择器：10
+	id选择器：100
+	行内选择器：1000
+	常见的伪元素有“：::before：after：first-letter first-line
+	常见的伪类：:hover :first-child”
+-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		#box1 .hezi2 p{ /*1 1 1*/
+			color:red;
+		}
+		div div #box3 p{ /*1 0 3*/
+			color:green;
+		}
+		div.hezi1 div.hezi2 div.hezi3 p{  /*0 3 4*/
+			color:blue;
+		}
+		[title] {
+			color: pink;
+		}
+	</style>
+</head>
+<body>
+	<div class="hezi1" id="box1">
+		<div class="hezi2" id="box2">
+			<div class="hezi3" id="box3">
+				<p>猜猜我是什么颜色？</p>
+			</div>
+		</div>
+	</div>
+	
+	<!--行内选择器-->
+	<div style="color: red;">style行内选择器</div>
+	
+	<!--属性选择器-->
+	<div title="我的">不要说了</div>
+</body>
+</html>

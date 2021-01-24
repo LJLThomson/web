@@ -1,0 +1,63 @@
+<!--
+	作者：1173795632@qq.com
+	时间：2020-05-04
+	描述：设置
+	1、设置值
+	
+	2、回调函数callback
+	
+	3设置属性attr
+	
+	4、	attr() 的回调函数
+-->
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script>
+		//		1设置值
+		$("#btn1").click(function() {
+			$("#test1").text("Hello world!");
+		});
+		$("#btn2").click(function() {
+			$("#test2").html("<b>Hello world!</b>");
+		});
+		$("#btn3").click(function() {
+			$("#test3").val("RUNOOB");
+		});
+		//   2回调函数
+		$("#btn1").click(function() {
+			$("#test1").text(function(i, origText) {
+				return "旧文本: " + origText + " 新文本: Hello world! (index: " + i + ")";
+			});
+		});
+		$("#btn2").click(function() {
+			$("#test2").html(function(i, origText) {
+				return "旧 html: " + origText + " 新 html: Hello <b>world!</b> (index: " + i + ")";
+			});
+		});
+		//3设置属性
+		$("button").click(function() {
+			$("#runoob").attr("href", "http://www.runoob.com/jquery");
+		});
+		$("button").click(function() {
+			$("#runoob").attr({
+				"href": "http://www.runoob.com/jquery",
+				"title": "jQuery 教程"
+			});
+		});
+		//4 属性函数
+		$("button").click(function() {
+			$("#runoob").attr("href", function(i, origValue) {
+				return origValue + "/jquery";
+			});
+		});
+	</script>
+
+	<body>
+	</body>
+
+</html>

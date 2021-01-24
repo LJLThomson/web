@@ -1,0 +1,71 @@
+<!--
+	作者：1173795632@qq.com
+	时间：2020-05-04
+	描述：
+	:eq(index)	index是从0开始的一个数字，选择序号为index的元素。选择第一个匹配的元素。	$(“li:eq(1)”). css(“background”,”red”)
+	:gt(index)	Index 是从0开始的一个数字，选择序号大于index的元素	$(“li:gt(2)”). css(“background”,”red”)
+	:lt(index)	Index是从0开始的一个数字，选择小于index 的元素	$(“li:lt(2)”). css(“background”,”red”)
+	:odd	选择所有序号为奇数行的元素	$(“li:odd”). css(“background”,”red”)
+	:even	选择所有序号为偶数的元素	$(“li:even”). css(“background”,”red”)
+	:first	选择匹配第一个元素	$(“li:first”). css(“background”,”red”)
+	:last	选择匹配的最后一个元素	$(“li:last”). css(“background”,”red”)
+-->
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="jquery-1.11.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // :odd
+            //$("li:odd").css("background","red");
+
+            // :even
+            //$("li:even").css("background","green");
+
+            // :eq(index)
+            //$("ul li:eq(4)").css("font-size","30px");
+
+
+            // :lt(index)
+            //$("li:lt(6)").css("font-size","30px");
+
+            // :gt(index)
+            //$(".ulList1 li:gt(7)").css("font-size","40px");
+
+            // :first
+            //$(".ulList li:first").css("font-size","40px");
+
+            // :last
+            $("li:last").css("font-size","40px");
+        });
+    </script>
+</head>
+<body>
+<ul class="ulList">
+    <li>01男嘉宾</li>
+    <li>02男嘉宾</li>
+    <li>03男嘉宾</li>
+    <li>04男嘉宾</li>
+    <li>05男嘉宾</li>
+    <li>06男嘉宾</li>
+    <li>07男嘉宾</li>
+    <li>08男嘉宾</li>
+    <li>09男嘉宾</li>
+    <li>10男嘉宾</li>
+</ul>
+<ul class="ulList">
+    <li>01男嘉宾</li>
+    <li>02男嘉宾</li>
+    <li>03男嘉宾</li>
+    <li>04男嘉宾</li>
+    <li>05男嘉宾</li>
+    <li>06男嘉宾</li>
+    <li>07男嘉宾</li>
+    <li>08男嘉宾</li>
+    <li>09男嘉宾</li>
+    <li>10男嘉宾</li>
+</ul>
+</body>
+</html>

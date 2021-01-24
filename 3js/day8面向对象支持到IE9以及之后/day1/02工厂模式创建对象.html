@@ -1,0 +1,46 @@
+<!--
+	作者：1173795632@qq.com
+	时间：2020-04-30
+	描述：函数版对象 ————也就是返回一个对象
+-->
+
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    //  刚才 只有一个对象，我们如果需要很多就需要用到函数
+    function Person(name,age) {
+        var obj = {};  // 声明对象
+        obj.name = name;
+        obj.age = age;
+        obj.showName = function() {
+            alert("我的名字是" + name);
+        }
+        obj.showAge = function() {
+            alert("我的年龄是" + age);
+        }
+        return obj;  // 返回对象  this
+    }
+    var xiaoming = Person("小明1",12);
+    console.log(xiaoming.name);
+    console.log(xiaoming.age);
+    xiaoming.showName();
+    var daming = Person("大明1",12);
+    daming.showName();
+    
+    
+    var fun2 = function(){
+    	this.name = 'peter';
+    	return 'jack';
+    }
+    console.log(fun2()); //返回jack
+    var p3 = new fun2(); //返回对象
+    console.log(p3.name);
+</script>

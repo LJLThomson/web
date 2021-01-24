@@ -1,0 +1,33 @@
+<!--
+	作者：1173795632@qq.com
+	时间：2020-05-26
+	描述：call和apply和bind
+	重新指向对象
+-->
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+</html>
+<script>
+	var name = '小王',age=17;
+	var obj = {
+		name:'小张',
+		objAge:this.age,
+		myFun:function(fm,t) {
+			console.log(this.name+'年龄'+this.age,'来之'+fm+'去'+t);
+		}
+	}
+	var db = {
+		name:'德玛',
+		age:99
+	}
+	obj.myFun.call(db,'成都','上海')；　　　　 // 德玛 年龄 99  来自 成都去往上海
+	obj.myFun.apply(db,['成都','上海']);      // 德玛 年龄 99  来自 成都去往上海  
+	obj.myFun.bind(db,'成都','上海')();       // 德玛 年龄 99  来自 成都去往上海
+	obj.myFun.bind(db,['成都','上海'])();　　 // 德玛 年龄 99  来自 成都, 上海去往 undefined
+</script>

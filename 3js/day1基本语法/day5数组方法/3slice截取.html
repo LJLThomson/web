@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			var fruit = ['苹果','香蕉','水密'];
+			//slice不改变原数组，只会返回新的结果
+			//slice在截取的时候，只包含开始，不包含结尾
+//			var re = fruit.slice(1,2);
+//			var re = fruit.slice(1,fruit.length);
+			//等价于
+//			var re = fruit.slice(1,-1);//-1在c语言中是最大值
+			var re = fruit.slice(2);//这种就是从头开始截取，2位截取几位
+			document.write(re);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

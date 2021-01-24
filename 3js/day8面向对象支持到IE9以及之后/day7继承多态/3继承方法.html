@@ -1,0 +1,36 @@
+<!--
+	作者：1173795632@qq.com
+	时间：2020-05-26
+	描述：prototype
+	prototype的方法是有返回值的， 无返回值会返回undefined
+-->
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+</html>
+<script>
+	 function Person(name,age,sex) {
+      this.name=name;
+      this.sex=sex;
+      this.age=age;
+    }
+    Person.prototype.eat=function () {
+      console.log("人可以吃东西");
+    };
+    Person.prototype.sleep=function () {
+      console.log("人在睡觉");
+    };
+    Person.prototype.play=function () {
+      console.log("生活就是不一样的玩法而已");
+      return "nan"
+    };
+    var boy  = new Person('剑侠客',20,'男');
+    console.log(boy.sleep());//undefined
+    var funs = boy.play();//nan
+    console.log(funs);
+</script>

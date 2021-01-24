@@ -1,0 +1,39 @@
+<!--
+	作者：1173795632@qq.com
+	时间：2020-04-11
+	描述：position:relative;相对定位
+	也就是说，如果一个盒子想进行位置调整，那么就要使用相对定位
+	top: 100px; 相对顶部 100px
+ 	left: 400px; 相对左边400px
+ 	2、相对定位不脱标，真实位置是在老家，只不过影子出去了，可以到处飘。
+-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		div{
+			width: 200px;
+			height: 200px;
+		}
+		.box1{
+			background-color: yellowgreen;
+		}
+		.box2{
+			background-color: skyblue;
+ 			position: relative;
+ 			top: 100px;
+ 			left: 400px;
+		}
+		.box3{
+			background-color: orange;
+		}
+	</style>
+</head>
+<body>
+	<div class="box1"></div>
+	<div class="box2"></div>
+	<div class="box3"></div>
+</body>
+</html>

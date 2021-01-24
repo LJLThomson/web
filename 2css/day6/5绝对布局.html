@@ -1,0 +1,43 @@
+<!--
+	作者：1173795632@qq.com
+	时间：2020-04-12
+	描述：绝对布局特性
+	区别于相对布局，相对布局，还是在标准文档流中
+	1、绝对布局脱离标准文档流，如同float之后元素，既可以添加宽高又可以并排
+	2、绝对定位之后，标签就不区分所谓的行内元素、块级元素了，不需要display:block;就可以设置宽、高了
+-->
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			div{
+				width: 200px;
+				height: 200px;
+			}
+			.box1{
+				background-color: yellowgreen;
+			}
+			.box2 {
+				background-color: skyblue;
+				position: absolute;
+				top: 100px;
+				left: 140px;
+			}
+			.box3	{
+				background-color: red;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div class="box1">box1</div>
+		<div class="box2">box2</div>
+		<div class="box3">box3</div>
+	</body>
+</html>

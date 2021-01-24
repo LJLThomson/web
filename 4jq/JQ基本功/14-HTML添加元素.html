@@ -1,0 +1,76 @@
+<!--
+	作者：1173795632@qq.com
+	时间：2020-05-04
+	描述：添加元素或内容
+	append() - 在被选元素的结尾插入内容
+	prepend() - 在被选元素的开头插入内容
+——————一般用于添加元素
+	after() - 在被选元素之后插入内容
+	before() - 在被选元素之前插入内容
+——————一般用于添加内容
+注意：二者有区别,append和prepend是指在元素内中之前之后，比如<div>之前xxx之后</div>
+	 after和before是指在元素外之前之后，比如之前<div></div><div>xxx</div></div>之后
+-->
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js">
+</script>
+	<script>
+		//1append结尾添加元素
+		$(document).ready(function() {
+			$("#btn1").click(function() {
+				$("p").append(" <b>追加文本</b>。");
+			});
+			$("#btn2").click(function() {
+				$("ol").append("<li>追加列表项</li>");
+			});
+		});
+		//2 prepend
+		$(document).ready(function() {
+			$("#btn1").click(function() {
+				$("p").prepend("<b>在开头追加文本</b>。 ");
+			});
+			$("#btn2").click(function() {
+				$("ol").prepend("<li>在开头添加列表项</li>");
+			});
+		});
+		//通过 append() 和 prepend() 方法添加若干新元素
+		function appendText() {
+			var txt1 = "<p>文本。</p>"; // 使用 HTML 标签创建文本
+			var txt2 = $("<p></p>").text("文本。"); // 使用 jQuery 创建文本
+			var txt3 = document.createElement("p");
+			txt3.innerHTML = "文本。"; // 使用 DOM 创建文本 text with DOM
+			$("body").append(txt1, txt2, txt3); // 追加新元素
+		}
+
+		//after 和before
+		$("img").after("在后面添加文本");
+		$("img").before("在前面添加文本");
+		function afterText() {
+			var txt1 = "<b>I </b>"; // 使用 HTML 创建元素
+			var txt2 = $("<i></i>").text("love "); // 使用 jQuery 创建元素
+			var txt3 = document.createElement("big"); // 使用 DOM 创建元素
+			txt3.innerHTML = "jQuery!";
+			$("img").after(txt1, txt2, txt3); // 在图片后添加文本
+		}
+	</script>
+
+	<body>
+		
+		<p style="background: yellow;">这是一个段落。</p>
+<p>这是另外一个段落。</p>
+<ol>
+<li>列表 1</li>
+<li>列表 2</li>
+<li>列表 3</li>
+</ol>
+<button id="btn1">添加文本</button>
+<button id="btn2">添加列表项</button>
+	</body>
+
+</html>

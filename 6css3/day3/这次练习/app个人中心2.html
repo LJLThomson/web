@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>零玖玖教育 - ljj.cn </title>
+    <meta name="author" content="零玖玖教育 - ljj.cn">
+    <meta name="copyright" content="零玖玖教育 - ljj.cn">
+    <meta name="description" content="零玖玖教育，是一家专注的前端开发培训的公司，是目前培训行业中最具口碑的机构。我们向学员提供了JavaScript、nodeJs、AngularJS、jQuery、HTML+CSS、HTML5+CSS3，移动端等课程。">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        .cw{
+            width: 640px;
+            margin: 0 auto;
+        }
+        .fl{
+            float: left;
+        }
+        .fr{
+            float: right;
+        }
+        body{
+            background-color: #FAFAFA;
+        }
+
+        header{
+            position: fixed;
+            top:0;
+            left:0;
+            width: 100%;
+            height: 85px;
+            background-color: #F9F9F9;
+            border-bottom: solid 1px #ccc;
+            display: flex;
+            padding: 0 20px;
+            box-sizing: border-box;
+        }
+        .u_user,.u_setting{
+            width: 46px;
+            height: 46px;
+            background-color: yellowgreen;
+            display: inline-block;
+            margin-top: 19px;
+        }
+        header h4{
+            text-align: center;
+            line-height: 85px;
+            flex: 1;
+        }
+        main{
+            margin-top: 86px;
+        }
+        
+        .m_userinfo{
+            background-color: #fff;
+            padding: 28px 20px 20px;
+            border-bottom: solid 1px #ccc;
+        }
+        .m_user_t{
+            display: flex;
+            padding-bottom: 18px;
+        }
+        .u_img{
+            width: 185px;
+            height: 185px;
+            border-radius: 6px;
+        }
+        .u_img img{
+            width: 100%;
+            border-radius: 6px;
+            height: 100%;
+        }
+        .m_user_c{
+            flex: 1;
+            margin-left: 22px;
+            display: flex;
+            flex-direction: column;
+        }
+        .m_user_c ul{
+            flex: 1;
+            display: flex;
+            align-items: center;
+        }
+        .m_user_c ul li{
+            flex: 1;
+            height: 63px;
+            align-items: center;
+            flex-direction: column;
+            display: flex;
+            justify-content: center;
+            border-right: solid 1px #ccc;
+        }
+        .m_user_c ul li:last-child{
+            border-right: none;
+        }
+        .m_user_c ul li span{
+            display: block;
+            margin-bottom: 20px;
+            font-size: 30px;
+            color: #1F6299;
+        }
+        .u_bianji{
+            height: 63px;
+            display: block;
+            border-radius: 8px;
+            background-color: #EFEFEF;
+            line-height: 63px;
+            text-align: center;
+        }
+        .u_info_txt{
+            font-size: 22px;
+            line-height: 38px;
+            border-top: solid 1px #ccc;
+            padding-top: 18px;
+        }
+        .img_list{
+            background-color: #fff;
+        }
+        .img_list li{
+            float: left;
+            /*width: 33.3333333%;*/
+            width: calc(33% - 3px);
+            height: 100px;
+            overflow: hidden;
+            /*margin-bottom: 5px;*/
+            margin-bottom: 5px;
+        }
+        .img_list li:nth-child(3n - 1){
+            margin: 0 5px;
+            width: calc(34% - 4px);
+        }
+        .img_list img{
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="" class="u_user"></a>
+        <h4>穿鞋子的猪</h4>
+        <a href="" class="u_setting"></a>
+    </header>
+    <main>
+        <div class="m_userinfo">
+            <div class="m_user_t">
+                <div class="u_img">
+                    <img src="A74.jpg" alt="">
+                </div>
+                <div class="m_user_c">
+                    <ul>
+                        <li><span>354</span>照片</li>
+                        <li><span>354</span>照片</li>
+                        <li><span>354</span>照片</li>
+                    </ul>
+                    <a href="#" class="u_bianji">编辑个人资料</a>
+                </div>
+            </div>
+            <p class="u_info_txt">爱上对方爱上对方爱上对方爱上上对方爱上对方爱上上对方爱上对方爱上上对方爱上对方爱上上对方爱上对方爱上上对方爱上对方爱上对方爱上对方暗室逢灯爱上对方爱上对方</p>
+        </div>
+
+        <ul class="img_list">
+            <li><img src="img/1.jpg" alt=""></li>
+            <li><img src="img/2.jpg" alt=""></li>
+            <li><img src="img/3.jpg" alt=""></li>
+            <li><img src="img/1.jpg" alt=""></li>
+            <li><img src="img/2.jpg" alt=""></li>
+            <li><img src="img/3.jpg" alt=""></li>
+            <li><img src="img/1.jpg" alt=""></li>
+            <li><img src="img/2.jpg" alt=""></li>
+            <li><img src="img/3.jpg" alt=""></li>
+            <li><img src="img/1.jpg" alt=""></li>
+            <li><img src="img/2.jpg" alt=""></li>
+            <li><img src="img/3.jpg" alt=""></li>
+            <li><img src="img/1.jpg" alt=""></li>
+            <li><img src="img/2.jpg" alt=""></li>
+            <li><img src="img/3.jpg" alt=""></li>
+            <li><img src="img/1.jpg" alt=""></li>
+            <li><img src="img/2.jpg" alt=""></li>
+            <li><img src="img/3.jpg" alt=""></li>
+        </ul>
+
+
+    </main>
+
+</body>
+</html>

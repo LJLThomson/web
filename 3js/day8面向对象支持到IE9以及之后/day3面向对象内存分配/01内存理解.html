@@ -1,0 +1,40 @@
+<!--
+	作者：1173795632@qq.com
+	时间：2020-05-22
+	描述：实例化一个对象，内存
+	1、实例化一个对象,那么内存中会开辟两个内存区域，地址，地址占用内存非常小，可以说无， 数据空间（占用内存非常大，（内存空间））
+——————会将对象中所有属性都拷贝一份，一旦实例赋予新值，则替换掉内存空间
+	2、浅拷贝，或者说是引用，只是拷贝了一个地址空间，指向的还是数据空间，操作同一个数据
+	注意3：除了基本类型赋值是深拷贝，其他对象赋值都是引用,甚至new String也是如此，与java不同
+	4、变量p只是拷贝了一份地址值，地址指向数据空间
+-->
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+</html>
+<script>
+	function Product(name) {
+		this.name = name;
+	}
+	//深拷贝， 实例化一个对象,那么内存中会开辟两个内存区域，地址（内存空间），地址占用内存非常小，可以说无， 数据空间（占用内存非常大）
+	var p =new Product("name"); // 变量p只是拷贝了一份地址值，但会分配内存空间，地址指向数据内存空间
+	var p2 = p;  //浅拷贝，或者说是引用，只是拷贝了一个地址空间，指向的还是数据空间，操作同一个数据
+	p2.name = "zhangsan";
+	console.log(p.name);//zhangsan
+	console.log(p.constructor);
+	
+	//注意
+	var str = "12";
+	var st2 = str;
+	st2 = "34";
+	console.log(str); //12
+	var str3 = new String("1");
+	var str4 = str3;
+	str4 = "23";
+	console.log(str3);//"1"
+</script>

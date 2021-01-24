@@ -1,0 +1,42 @@
+<!--
+	作者：1173795632@qq.com
+	时间：2020-04-12
+	描述：父盒子做参考点的含义 ——父盒子不脱标
+	1、要听最近的已经定位的祖先元素的，不一定是父亲，可能是爷爷：
+	2、不一定是相对定位，任何定位，都可以作为参考点
+	用途：
+	“子绝父相”有意义，父亲没有脱标，儿子脱标在父亲的范围里面移动
+-->
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			div{
+				width: 400px;
+				height: 400px;
+				border:10px solid red;
+				margin: 100px;
+				position: relative;
+			}
+			p{
+			width: 100px;
+			height: 100px;
+			background-color: orange;
+			position: absolute;
+			top: 40px;
+			left: 40px;
+		}
+		</style>
+	</head>
+	<body>
+		<div>
+			<p></p>
+		</div>
+	</body>
+</html>

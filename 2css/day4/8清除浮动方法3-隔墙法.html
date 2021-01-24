@@ -1,0 +1,62 @@
+<!--
+	作者：1173795632@qq.com
+	时间：2020-04-11
+	描述：隔墙法
+	中间隔一个div  <div class="c1 h8"></div>
+	div 清除浮动，设置高度（可以当做margin），
+	结果：解决了clear:both margin致命缺陷
+-->
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			
+			.box1 {
+				background-color: gold;
+			}
+			
+			li {
+				float: left;
+				width: 120px;
+				height: 40px;
+				background-color: orange;
+				text-align: center;
+			}
+			
+			.c1 {
+				clear: both;
+			}
+			
+			.h8 {
+				height: 8px;
+				_font-size: 0;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="box1">
+			<ul>
+				<li>HTML</li>
+				<li>CSS</li>
+				<li>JS</li>
+			</ul>
+		</div>
+		<div class="c1 h8"></div>
+		<div class="box2">
+			<ul>
+				<li>学习方法</li>
+				<li>英语水平</li>
+				<li>面试技巧</li>
+			</ul>
+		</div>
+	</body>
+
+</html>

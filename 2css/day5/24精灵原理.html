@@ -1,0 +1,32 @@
+<!--
+	作者：1173795632@qq.com
+	时间：2020-04-11
+	描述：CSS精灵 ——————多种图片整合到一张图
+	原理：网页中一些背景图片整合到一张图片文件中，再利用CSS的“background-image”，“background-repeat”，“background-position”的组合进行背景定位
+	优点：1、降低http请求响应，从而大大的提高了页面的性能，这也是CSS Sprites最大的优点
+	2、个人认为能CSS Sprites能减少图片的字节
+	缺点：不够灵活
+	1.在图片合并的时候，你要把多张图片有序的合理的合并成一张图片，还要留好只够的空间，防止板块内不会出现不必要的背景；这些还好，做痛苦的是在宽屏，高分辨率的屏幕下的自适应页面，你的图片如果不够宽，很容易出现背景断裂；
+	2.CSS Sprites在开发的时候比较麻烦，你要通过photoshop或其他工具测量计算每一个背景单元的精确位置
+	3.CSS Sprites在维护的时候比较麻烦，如果页面背景有少许改动，一般就要改这张合并的图片，无序改的地方最好不要动
+-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		div{
+			width: 300px;
+			height: 300px;
+			border: 1px solid #000;
+			background-image: url(../img/wuyifan.jpg);
+			background-repeat: no-repeat;
+			background-position:-50px -120px;
+		}
+	</style>
+</head>
+<body>
+	<div></div>
+</body>
+</html>

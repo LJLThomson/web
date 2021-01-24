@@ -1,0 +1,40 @@
+<!--
+	作者：1173795632@qq.com
+	时间：2020-04-10
+	描述：后代选择器
+	div1 p 是指div1下所有的p
+	div1 .li2 p 是指div1 .li2 下的所有p
+-->
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.div1 p {
+				color:blue
+			}
+			.div1 .li2 p {
+				color: red;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="div1">
+			<ul>
+				<li>
+					<p>段落</p>
+					<p>段落</p>
+				</li>
+				<li class="li2">
+					<p>段落</p>
+					<p>段落</p>
+				</li>
+			</ul>
+		</div>
+		<div>
+			<p>段落</p>
+			<p>段落</p>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,49 @@
+<!--
+	作者：1173795632@qq.com
+	时间：2020-05-26
+	描述：通过Protype
+	准备来说，这个不叫继承，只是赋予了Protype一个对象，让其对象为Person，所以继承了它的属性
+-->
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+	</body>
+
+</html>
+<script>
+   function Person(name,age,sex) {
+      this.name=name;
+      this.sex=sex;
+      this.age=age;
+    }
+    Person.prototype.eat=function () {
+      console.log("人可以吃东西");
+    };
+    Person.prototype.sleep=function () {
+      console.log("人在睡觉");
+    };
+    Person.prototype.play=function () {
+      console.log("生活就是不一样的玩法而已");
+    };
+
+
+    function Student(score,name) {
+      this.score=score;
+      this.name = name;
+    }
+    //改变学生的原型的指向即可==========>学生和人已经发生关系
+    Student.prototype=new Person("小明",10,"男"); //改变原型指向的
+    Student.prototype.study=function () {
+      console.log("学习很累很累的哦.");
+    };
+    var student = new Student(130,"nihao");
+    console.log(student.name)
+    console.log(student.play());
+    console.log(student.sleep());
+</script>

@@ -1,0 +1,87 @@
+<!--
+	作者：1173795632@qq.com
+	时间：2020-05-08
+	描述：
+	E::selection 可改变选中文本的样式
+	E::placeholder 可改变placeholder默认样式，这个存在明显的兼容问题，比如::-webkit-input-placeholder，具体参考手册进行对比。
+	E:after、E:before 在旧版本里是伪类，在新版本里是伪元素，新版本下E:after、E:before会被自动识别为E::after、E::before，按伪元素来对待。
+	":" 与 "::" 区别在于区分伪类和伪元素
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>选择器 - 伪元素</title>
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+			font-family: '微软雅黑';
+			background-color: #F7F7F7;
+		}
+
+		.wrapper {
+			width: 1024px;
+			margin: 0 auto;
+		}
+
+		.wrapper > section {
+			min-height: 300px;
+			margin-bottom: 30px;
+			box-shadow: 1px 1px 4px #DDD;
+			background-color: #FFF;
+		}
+
+		.wrapper > header {
+			text-align: center;
+			line-height: 1;
+			padding: 20px;
+			margin-bottom: 10px;
+			font-size: 30px;
+		}
+
+		.wrapper section > header {
+			line-height: 1;
+			padding: 10px;
+			font-size: 22px;
+			color: #333;
+			background-color: #EEE;
+		}
+
+		.wrapper .wrap-box {
+			padding: 20px;
+		}
+
+		section:nth-child(3) p::selection {
+			background-color: red;
+			color: blue;
+		}
+
+		section:nth-child(4) input::-webkit-input-placeholder  {
+			color: blue;
+		}
+	</style>
+</head>
+<body>
+	<div class="wrapper">
+		<header>CSS3-伪元素选择器</header>
+		<section>
+			<header>简介</header>
+			<div class="wrap-box">
+			</div>
+		</section>
+		<section>
+			<header>E::selection</header>
+			<div class="wrap-box">
+				<p>一大段话一大段话一大段话一大段话一大段话一大段话一大段话一大段话</p>
+			</div>
+		</section>
+		<section>
+			<header>E::placeholder</header>
+			<div class="wrap-box">
+				<input type="text" placeholder="我是一个占位符">
+			</div>
+		</section>
+	</div>
+</body>
+</html>

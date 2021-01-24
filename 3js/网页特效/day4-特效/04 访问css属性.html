@@ -1,0 +1,52 @@
+<!--
+	作者：1173795632@qq.com
+	时间：2020-04-28
+	描述：box.style["left"] ————获取对象属性第二种方式，主要用于根据“”传值，取得行内样式
+	["left"]————代表的属性
+	 console.log(p.getAttribute("class"));  //p.className ————获取的属性值
+   	1、box.style.width      box.style.top    
+     	点语法可以得到 width  属性  和 top属性  带有单位的。 100px
+     	但是这个语法有非常大的缺陷，  不变的。 后面的width  和 top  没有办法传递参数的（带有px）。
+    2、利用 []  访问属性
+     	语法格式:  box.style[“width”]   
+              元素.style[“属性”];
+      	console.log(box.style["left"]);
+      	最大的优点  ：  可以给属性传递参数 ，传递自己的属性
+      	
+     二者第二大区别： div.style.left只能获取行内样式
+     	div.style
+-->
+
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+            left: 10px;
+            position: absolute;
+            top: 20px;
+        }
+    </style>
+</head>
+<body>
+<div id="box" style="left:30px;width: 100px;height: 100px;"></div>
+</body>
+</html>
+<script>
+    var box =document.getElementById("box");
+ 	
+    console.log(box.style.left);
+    console.log(box.style["left"]);
+    function fn(attr){
+        console.log(box.style[attr]);
+        box.style["width"] = 500 + "px";
+//		box.style.width = 500 + "px";
+    }
+    fn("height");
+    fn("width");
+</script>

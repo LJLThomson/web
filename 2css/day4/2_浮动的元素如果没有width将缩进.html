@@ -1,0 +1,30 @@
+<!--
+	作者：1173795632@qq.com
+	时间：2020-04-11
+	描述：浮动之后width没设置
+	标准流：未设置width，占满整行
+	浮动：div块级元素， 失去了width，变成普通，需设置width和height，不然只显示文字宽度
+	浮动：行内元素， 拥有了width，可以设置width和height
+-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		.box1{
+			float: left;
+			background-color: gold;
+		}
+		.box2{
+				color:red;
+				background-color: yellowgreen;
+				clear: both;
+		}
+	</style>
+</head>
+<body>
+	<div class="box1">我是文字</div>
+	<div class="box2">我是文字</div>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+</html>
+<script>
+	console.log(fn());
+	console.log(fn2());//错误，对象无法开始被运行，方法会被调整在最开始位置，与java一致
+	
+	function fn() {
+		console.log('函数');
+	}
+	var fn2 = function() {
+		console.log('函数变量');
+	}
+	console.log(fn2()); //可以
+</script>

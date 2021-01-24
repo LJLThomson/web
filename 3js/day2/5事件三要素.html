@@ -1,0 +1,47 @@
+<!--
+	作者：1173795632@qq.com
+	时间：2020-04-14
+	描述：鼠标点击
+	1、onclick 单击
+	2、ondblclick 双击
+	3、onkeyup鼠标抬起
+	4、onchange  文本内容或下拉菜单中的选项发生改变
+	5、onfocus  获得焦点，表示文本框等获得鼠标光标。
+	6、onblur  失去焦点，表示文本框等失去鼠标光标。
+	7、onmouseover 鼠标悬停，即鼠标停留在图片等的上方
+	8、onmouseout 鼠标移出
+	9、onload 网页文档加载事件
+	10、onsubmit 表单提交事件
+	11、onreset重置表单时
+-->
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#demo{
+				width: 200px;
+				height: 200px;
+				background-color: pink;
+			}
+			#btn{
+				width: 50px;
+				height: 50px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="demo"></div>
+		<button id="btn">改变宽度</button>
+		<script>
+			var demo = document.getElementById("demo");
+			console.log(typeof demo);
+			var btn = document.getElementById("btn");
+			btn.onclick = function(){
+				demo.style.width = "400px";
+				demo.style.height ="800px"; 
+			}
+		</script>
+	</body>
+</html>

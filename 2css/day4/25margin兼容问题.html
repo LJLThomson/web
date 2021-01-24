@@ -1,0 +1,54 @@
+<!--
+	作者：1173795632@qq.com
+	时间：2020-04-11
+	描述：margin IE6兼容问题
+	问题：当出现连续浮动的元素，携带和浮动方向相同的margin时，队首的元素，会双倍marign。？
+	解决方案1：
+	使浮动的方向和margin的方向，相反。
+	float: left;
+			margin-right: 40px;
+			
+	解决方案2：
+	使用hack 单独给队首的元素，写一个一半的margin
+	1ul li.no1{
+	_margin-left:20px;
+	}
+-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		ul{
+			border: 1px solid #000;
+			height: 100px;
+			list-style: none;
+		}
+		ul li{
+			float: left;
+			width: 120px;
+			height: 40px;
+			margin-left: 40px;
+			background-color: orange;
+		}
+		ul li.no1{
+			margin-left:20px;
+		}
+	</style>
+</head>
+<body>
+	<ul>
+		<li class="no1"></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+	</ul>
+</body>
+</html>

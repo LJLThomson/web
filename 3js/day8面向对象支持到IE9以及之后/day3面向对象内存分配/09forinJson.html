@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>无标题文档</title>
+    <script>
+
+        var iphone = {  //map对象
+            name:'iphone',
+            age:100,
+            address:{home:'江苏',current:'北京昌平'}
+        }
+        console.log(toString.call(iphone)); //object类型，最好看做map对象
+        for(var i in iphone) {
+            if (iphone.hasOwnProperty(i)) {
+                console.log(i);
+            }
+        }
+    </script>
+</head>
+
+<body>
+</body>
+</html>

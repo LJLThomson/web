@@ -1,0 +1,46 @@
+<!--
+	作者：1173795632@qq.com
+	时间：2020-04-11
+	描述：行内转块状
+	display: block;
+	让标签变为块级元素。此时这个标签，和一个div无异：
+● 此时这个span能够设置宽度、高度
+● 此时这个span必须霸占一行了，别人无法和他并排
+● 如果不设置宽度，将撑满父亲
+
+	当我们必须设置宽高又必须并排时，标准流做不到，就必须脱离标准流
+	css中一共有三种手段，使一个元素脱离标准文档流：
+1） 浮动
+2） 绝对定位
+3） 固定定位
+-->
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			span{
+				display: block;
+				width: 200px;
+				height: 200px;
+				background-color: pink;
+			}
+			a{
+				display: block;
+				width: 250px;
+				height: 40px;
+				/*文本居中：*/
+				text-align: center;
+				/*行高40，和盒子一样高，所以就垂直居中了，后面讲*/
+				line-height: 40px;
+				background-color: orange;
+			}
+		</style>
+	</head>
+	<body>
+		<a href="http://www.163.com"> 点击我去网易</a>
+		<span>我是一个span</span>
+		<span>我是一个span</span>
+	</body>
+</html>

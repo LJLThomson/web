@@ -1,0 +1,41 @@
+<!--
+	作者：1173795632@qq.com
+	时间：2020-05-04
+	描述：HTML捕获
+	jQuery 中非常重要的部分，就是操作 DOM 的能力。
+	
+	三个简单实用的用于 DOM 操作的 jQuery 方法：
+	text() - 设置或返回所选元素的文本内容
+	html() - 设置或返回所选元素的内容（包括 HTML 标记）
+	val() - 设置或返回表单字段的值
+-->
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script>
+		$("#btn1").click(function() {
+			alert("Text: " + $("#test").text());
+		});
+		$("#btn2").click(function() {
+			alert("HTML: " + $("#test").html());
+		});
+		$(document).ready(function() {
+			$("button").click(function() {
+				alert("值为: " + $("#test").val());
+			});
+		});
+	</script>
+
+	<body>
+		<p id="test">这是段落中的 <b>粗体</b> 文本。</p>
+		<button id="btn1">显示文本</button>
+		<button id="btn2">显示 HTML</button>
+		<p>名称: <input type="text" id="test" value="菜鸟教程"></p>
+		<button>显示值</button>
+	</body>
+
+</html>

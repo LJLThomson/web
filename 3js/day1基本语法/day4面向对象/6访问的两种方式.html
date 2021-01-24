@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			function iphone2(){
+				this.size = '5';
+				this.color = '土豪金';
+				this.weight = '200g';
+				this.call = function(){
+					alert('能打电话！');
+				};
+			}
+			var iphones = new iphone2();
+//			document.write(iphones.call());
+//			document.write(iphones.color);
+//			document.write(iphones['color']);
+//			document.write(iphones['call']());
+//			document.write(iphones.weight);
+			//遍历
+			for(x in iphones){
+//				alert('哈');
+//				下面这种写法是错误的，首先 比如 color，就是‘color’字符串的形式，不是属性
+//				document.write(iphones.x);
+				document.write(iphones[x]);
+			}
+			//删除对象中的方法或属性,这种删除，是从堆栈里面删除对象， 以后就木有了
+			delete iphones.color;
+			document.write(iphones.color);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

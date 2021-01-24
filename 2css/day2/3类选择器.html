@@ -1,0 +1,59 @@
+<!--
+	作者：1173795632@qq.com
+	时间：2020-04-10
+	描述：类选择器
+	1、任何的标签都可以携带class属性
+	2、class属性可重复
+	3、同一个标签，可能同时属于多个类，用空格隔开
+	
+	也就是说：
+	1） 不要去试图用一个类名，把某个标签的所有样式写完。这个标签要多携带几个类，共同造成这个标签的样式。
+	2） 每一个类要尽可能小，有“公共”的概念，能够让更多的标签使用。
+	在css层，尽量使用class属性而不是id
+	
+	到底用id还是用class？
+	答案：尽可能的用class，除非极特殊的情况可以用id。
+	原因：id是js用的。也就是说，js要通过id属性得到标签，所以我们css层面尽量不用id，要不然js就很别扭。另一层面，我们会认为一个有id的元素，有动态效果。
+-->
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			body {
+				background-color: pink;
+			}
+			
+			h1 {
+				color: blue;
+				font-size: 60px;
+				font-weight: normal;
+				text-decoration: underline;
+				font-style: italic;
+			}
+			
+			.ljl {
+				font-size: 40px;
+				font-weight: bold;
+				color: black;
+			}
+			.mycolor{
+				font-size: 60px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<h1>我是一个标题</h1>
+		<a href="" class="ljl mycolor">连接</a>
+		<a href="">连接</a>
+		<a href="">连接</a>
+		<a href="">连接</a>
+		<a href="">连接</a>
+		<a href="">连接</a>
+		<a href="">连接</a>
+	</body>
+
+</html>

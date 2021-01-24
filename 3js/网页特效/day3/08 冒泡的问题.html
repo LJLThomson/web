@@ -1,0 +1,41 @@
+<!--
+	作者：1173795632@qq.com
+	时间：2020-04-27
+	描述：事件 问题 —————— 与android类似，但小盒子默认没有阻止大盒子的事件
+	E 6.0: 
+	div -> body -> html -> document
+	其他浏览器: 
+	div -> body -> html -> document -> window
+	以下事件不冒泡：blur、focus、load、unload
+	
+	按照android的理论来看， document-html-body-div，找到了就阻止
+-->
+
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<button id="btn">点击</button>
+</body>
+</html>
+<script>
+    var btn = document.getElementById("btn");
+    document.onclick = function() {
+        alert("点击了空白处")
+    }
+    btn.onclick = function(event) {
+        alert("点击了按钮")
+        var event = event || window.event;
+        if(event && event.stopPropagation)
+        {
+            event.stopPropagation();  //  w3c 标准
+        }
+        else
+        {
+            event.cancelBubble = true;  // ie 678  ie浏览器
+        }
+    }
+</script>

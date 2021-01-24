@@ -1,0 +1,42 @@
+<!--
+	序选择器：
+	IE8之后（包含）才支持
+	li:first-child 第一个li
+	li:last-child 最后一个li
+-->
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			ul li:first-child{
+				color: red;
+			}
+			ul li:last-child{
+				color: blue;
+			}
+			/*IE8之下的使用下面这种 类*/
+			/*ul li .first{
+				color: red;
+			}
+			ul li .last{
+				color: blue;
+			}*/
+		</style>
+	</head>
+	<body>
+	<ul>
+	<li class="first">项目</li>
+	<li>项目</li>
+	<li>项目</li>
+	<li>项目</li>
+	<li>项目</li>
+	<li>项目</li>
+	<li>项目</li>
+	<li>项目</li>
+		<li>项目</li>
+		<li class="last">项目</li>
+	</ul>
+	</body>
+</html>

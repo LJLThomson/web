@@ -1,0 +1,64 @@
+<!--
+	作者：1173795632@qq.com
+	时间：2020-04-24
+	描述：检测屏幕宽度和高度
+	
+	对于Internet Explorer、Chrome、Firefox、Opera 以及 Safari：
+window.innerHeight - 浏览器窗口的内部高度(包括滚动条)
+window.innerWidth - 浏览器窗口的内部宽度(包括滚动条)
+对于 Internet Explorer 8、7、6、5：
+
+document.compatMode ——————用于检测当前渲染模式
+BackCompat：标准兼容模式关闭。
+CSS1Compat：标准兼容模式开启。
+
+document.documentElement.clientHeight
+document.documentElement.clientWidth
+或者
+
+document.body.clientHeight
+document.body.clientWidth
+
+var w=window.innerWidth
+|| document.documentElement.clientWidth
+|| document.body.clientWidth;
+
+var h=window.innerHeight
+|| document.documentElement.clientHeight
+|| document.body.clientHeight;
+-->
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    function client() {
+        if(window.innerWidth != null)  // ie9 +  最新浏览器
+        {
+            return {
+                width: window.innerWidth,
+                height: window.innerHeight
+            }
+        }
+        else if(document.compatMode === "CSS1Compat")  // 标准浏览器
+        {
+            return {
+                width: document.documentElement.clientWidth,
+                height: document.documentElement.clientHeight
+            }
+        }
+        return {   // 怪异浏览器
+            width: document.body.clientWidth,
+            height: document.body.clientHeight
+
+        }
+    }
+
+    document.write(client().width);
+</script>

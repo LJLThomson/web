@@ -1,0 +1,77 @@
+<!--
+	作者：1173795632@qq.com
+	时间：2020-04-29
+	描述：闭包版函数节流
+	
+	再次强调————将函数与属性看成一致，函数也有对象，当做对象来看，就不会理解错函数闭包问题，以及函数调用问题
+-->
+<!DOCTYPE html>
+<html>
+
+	<head lang="en">
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+		<div id="demo"></div>
+	</body>
+
+</html>
+<script>
+	var num = 0;
+	var num2 = 0;
+	var demo = document.getElementById("demo")
+	window.onresize = throttle(function() {
+		demo.innerHTML = window.innerWidth || document.documentElement.clientWidth;
+		num++;
+		console.log(num);
+	}, 300); //创建一个对象
+	function throttle(fn, delay) { // 闭包  节流  实现了接口的特性
+		var timer = null;
+		num2++;
+		console.log(num2); // 每个对象只执行一次
+		return function() {
+			clearTimeout(timer); //取消掉上次拖屏
+			timer = setTimeout(fn, delay); // 实现了接口的特性，fn回调函数，返回给每个对象
+		}
+	}
+	//  下面案例与上面等价,仅仅只是融合了，这样可以实现业MVC，Model与View的分离
+	var timer2 = null;
+	window.onresize = throttle(function() {
+		clearTimeout(timer2);
+		timer2 = setTimeout(function() {
+			demo.innerHTML = window.innerWidth || document.documentElement.clientWidth;
+			num++;
+			console.log(num);
+		}, 300);
+	}, 300); //创建一个对象
+</script>
+
+<!--var throttle = function(fn,time){
+    var self = fn,
+        timer,
+        firstTime = true;
+    return function(){
+        var args = arguments,
+            _self = this;
+        if(firstTime){ //第一次调用的时候不需要过滤
+           self.apply(_self,args);
+           return firstTime = false;
+        };
+        if(timer){ 
+           return false;
+        };
+        timer = srtTimeout(function(){
+            clearTimeout(timer);
+            timer = null;
+            self.apply(_self,args);
+            firstTime = true;
+        },time || 500);
+    };
+};
+利用延迟和闭包将多余的函数执行请求给过滤掉
+
+window.onresize = throttle(function(){
+    //函数逻辑
+},300)-->

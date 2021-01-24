@@ -1,0 +1,61 @@
+<!--
+	作者：1173795632@qq.com
+	时间：2020-05-21
+	描述：this失效问题
+	
+-->
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+	</body>
+
+</html>
+<script>
+	function Product(name, price) {
+		/*属性 行为 可以为空或者给默认值*/
+		this.name = name
+		this.price = 1000;
+		this.description = '';
+		this.zhekou = ''
+		this.sales = ''
+		this.produceDate
+		/*我们的需求：自动计算打折后的价格*/
+		Object.defineProperty(this, "price", {
+			value: 5000000,
+			writable: false,
+		});
+		Object.defineProperty(this, "produceDate", {
+			get: function() {
+				return dateFormat(produceDate, 'yyyy年MM月dd日');
+			},
+			set: function(value) {
+				produceDate = value;
+			}
+		});
+
+		/*初始化函数的引入*/
+		/*我们将开发某个功能的初始化的工作都放在一起函数里面，用户只需要只要这一个工具就可以了*/
+		this.init = function() {  //必须添加this
+			bindDom();
+			bindEvents();
+
+		};
+		//这两个方法不再对象内,与java不同，访问时，访问不到，可以看做默认私有
+		function bindDom() {
+			console.log(1);
+		}
+		function bindEvents() {
+			console.log(2);
+		}
+	}
+	var iphone = new Product();
+	iphone.init(); // 封装一下方法
+//	iphone.bindDOM();//方法不到
+//	bindData();//访问不到
+</script>

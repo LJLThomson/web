@@ -1,0 +1,41 @@
+<!--
+	作者：1173795632@qq.com
+	时间：2020-04-11
+	描述：块级元素 和行内元素
+	容器级： div h ul ol li dl dt dd
+	文本级： p span img a  文字的宽度
+	除了P是块级元素，所有文本级都是行内元素
+	
+	1） 块级元素
+ 		霸占一行，不能与其他任何元素并列
+ 		能接受宽、高
+ 		如果不设置宽度，那么宽度将默认变为父亲的100%。
+	2） 行内元素
+		与其他行内元素并排
+		不能设置宽、高。默认的宽度，就是文字的宽度。
+-->
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			h1 {
+				width: 400px;
+				height: 90px;
+				background-color: pink;
+			}
+			span{
+				width: 400px;
+				height: 90px;
+				background-color: pink;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>哈哈哈</h1>
+		<h1>嘻嘻嘻</h1>
+		<span>哈哈哈</span>
+		<span>嘻嘻嘻嘻</span>
+	</body>
+</html>

@@ -1,0 +1,37 @@
+<!--
+	作者：1173795632@qq.com
+	时间：2020-05-23
+	描述：for in
+	对象的所有属性
+-->
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+</body>
+</html>
+
+<script>
+
+    function Product(){
+        this.name='iphone8'
+        this.description='手机中的战斗机'
+        this.price=7777
+        this.add = function(){}
+    }
+
+    Product.prototype={
+        date:'2017-8-8',
+        buy:function(){}
+    }
+    var iphone = new Product()
+
+    for(var i in iphone) {
+        console.log(i);
+    }
+    
+</script>

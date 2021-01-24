@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			.myboth {}
+		</style>
+	</head>
+
+	<body>
+		<div class="myboth" id="ft">我的世界</div>
+
+		<p>你好世界!</p>
+		<div id="main">
+			<p> DOM 是非常有用的。</p>
+			<p>该实例展示了 <b>getElementsByTagName</b> 方法</p>
+		</div>
+		
+		<p class="intro">你好世界!</p>
+		<p>该实例展示了 <b>getElementsByClassName</b> 方法!</p>
+		<script>
+			//1、getElementsByTagName
+			var x = document.getElementById("ft")
+			console.log(x)
+			
+			//2、getElementsByTagName
+			var x=document.getElementById("main");
+			var y=x.getElementsByTagName("p");
+			console.log(y)
+			document.write('id="main"元素中的第一个段落为：' + y[0].innerHTML);
+			
+			//3、getElementsByClassName  IE8之前不支持
+			x=document.getElementsByClassName("intro");
+			document.write("<p>文本来自 class 为 intro 段落: " + x[0].innerHTML + "</p>");
+		</script>
+	</body>
+
+</html>

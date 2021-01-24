@@ -1,0 +1,46 @@
+<!--
+	作者：1173795632@qq.com
+	时间：2020-05-04
+	描述：尺寸
+	width()  内容宽度返回元素的宽度（不包括内边距、边框或外边距）
+	height()   内容高度  height() 方法设置或返回元素的高度（不包括内边距、边框或外边距）。
+	innerWidth()       方法返回元素的宽度（包括内边距）。
+	innerHeight()      方法返回元素的高度（包括内边距）padding
+	outerWidth()       方法返回元素的宽度（包括内边距和边框）。
+	outerHeight()      方法返回元素的高度（包括内边距和边框）。
+-->
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script>
+		//1
+		$("button").click(function() {
+			var txt = "";
+			txt += "div 的宽度是: " + $("#div1").width() + "</br>";
+			txt += "div 的高度是: " + $("#div1").height();
+			$("#div1").html(txt);
+		});
+		//2
+		$("button").click(function() {
+			var txt = "";
+			txt += "div 宽度，包含内边距: " + $("#div1").innerWidth() + "</br>";
+			txt += "div 高度，包含内边距: " + $("#div1").innerHeight();
+			$("#div1").html(txt);
+		});
+		//3
+		$("button").click(function() {
+			var txt = "";
+			txt += "div 宽度，包含内边距和边框: " + $("#div1").outerWidth() + "</br>";
+			txt += "div 高度，包含内边距和边框: " + $("#div1").outerHeight();
+			$("#div1").html(txt);
+		});
+	</script>
+
+	<body>
+	</body>
+
+</html>

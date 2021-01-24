@@ -1,0 +1,45 @@
+<!--
+	作者：1173795632@qq.com
+	时间：2020-05-06
+	描述：引入第三方插件
+	需要注意的地方：
+	animate动画：不支持背景的动画效果
+	animate动画支持的属性列表
+	
+	jquery.color 背景色渐变
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>背景色动画插件演示</title>
+	<style>
+		.box {
+			background-color: #ccc;
+			height: 400px;
+			width: 400px;
+		}
+	</style>
+	<!-- 
+	第一步： 引入jQuery
+	第二步：引入第三方插件
+	第三步：用第三方插件实现效果 -->
+	<!--注意下面的js文件中方法会覆盖上面的js文件方法-->
+	<script src="jquery-1.11.3.min.js"></script>
+	<script src="jquery.color.js"></script>
+	<script>
+		$(function () {
+			$(".box").animate({
+					backgroundColor : "teal"
+				},
+				2000);
+		});
+	</script>
+
+</head>
+<body>
+	<div class="box">
+		
+	</div>
+</body>
+</html>

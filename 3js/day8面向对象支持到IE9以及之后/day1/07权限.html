@@ -1,0 +1,47 @@
+<!--
+	作者：1173795632@qq.com
+	时间：2020-05-20
+	描述：writable
+	默认为true，可写可修改
+	false， 为不可写，不可修改
+	value为默认值
+-->
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+</html>
+<script>
+	    //产品对象
+    /*对象内如何使用对象的属性和方法：this，对象外如何使用：先实例化，后用点语法*/
+    /*类 -- 抽象对象*/
+    function Product(name,price) {
+        /*属性 行为 可以为空或者给默认值*/
+        this.name=name
+        this.price=1000;
+        this.description = '';
+        this.zhekou = ''
+        this.sales = ''
+        this.produceDate
+        /*我们的需求：自动计算打折后的价格*/
+        Object.defineProperty(this, "price", {
+            value:5000000,
+            writable: false,
+        });
+        Object.defineProperty(this, "produceDate", {
+            get: function () {
+                return dateFormat(produceDate,'yyyy年MM月dd日');
+            },
+            set: function (value) {
+                produceDate = value;
+            }
+        });
+    }
+    var oppo = new Product();
+    oppo.price = 6000;
+    console.log(oppo.price); // 价格还是50000，不可更改
+</script>

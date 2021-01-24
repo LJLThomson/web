@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+
+    /*传参形式*/
+    function Product(name){
+        this.name = name
+    }
+
+
+    var iphone = new Product('iphone8s')
+
+    Product.prototype={
+
+    }
+    /*默认值*/
+    function Product(){
+        this.name = ''
+        this.price=0
+    }
+
+
+    var iphone = new Product()
+    /*动态添加形式*/
+    iphone.description='XXXXXXXXXX'
+    iphone.images=[]
+
+
+
+
+    /*混合模式*/
+    function Product(name,price){
+        this.name = name
+        this.price=price
+        this.version=1.0
+        this.add=function(){}
+    }
+
+
+    var iphone = new Product()
+    /*动态添加形式*/
+    iphone.description='XXXXXXXXXX'
+    iphone.images=[]
+
+
+    console.log(iphone instanceof Product)//true
+
+
+</script>

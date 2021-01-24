@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+</body>
+</html>
+
+<script>
+    var fun = function(){}
+    fun.prototype = {
+        info : {
+            name : 'peter', // info对象属性的值，不能被更改，不然就会被修改了
+            age : 25
+        }
+    }
+
+    var a = new fun();
+    var b = new fun();
+    a.info.name = 'jack';
+    b.info.name = 'tom';
+
+    console.log(a.info.name)  // 开发中，最好不要更改父类中属性对象的属性值
+    console.log(b.info.name)
+</script>

@@ -1,0 +1,88 @@
+<!--
+	作者：1173795632@qq.com
+	时间：2020-04-24
+	描述：
+	js 数组、对象转json 以及json转 数组、对象
+1、JS对象转JSON
+方式：JSON.stringify(obj)
+var json = {"name":"iphone","price":666}; //创建对象；
+var jsonStr = JSON.stringify(json);       //转为JSON字符串
+console.log(jsonStr);
+　　
+
+2、JS数组转JSON
+//数组转json串
+var arr = [1,2,3, { a : 1 } ];
+JSON.stringify( arr );
+　　
+
+3、JS对象数组转JSON
+//数组转json串
+var arr = [1,2,3, { a : 1 } ];
+JSON.stringify( arr );
+
+4、JSON转JS数组
+//json字符串转数组
+var jsonStr = '[1,2,3,{"a":1}]';
+var jsarr=JSON.parse( jsonStr );
+alert(jsarr[0]);
+　　
+
+5、JSON转JS对象
+var jsonString = '{"bar":"property","baz":3}';
+var jsObject = JSON.parse(jsonString);    //转换为json对象
+alert(jsObject.bar);    //取json中的值
+
+总结：JSON.stringify json对象转字符串
+JSON.parse 字符串转json对象
+-->
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    var arr = [15,25,35,45];
+    console.log(arr[1]);
+    var json = {width: 25,height:30};
+    console.log(json.width);
+    var json1 = {name :"刘德华",age: 55};
+    console.log(json1.name);  // 输出名字
+    console.log(json1.age);  // 输出年龄
+
+
+//		1、JS对象转JSON
+//		方式：JSON.stringify(obj)
+		var json = {"name":"iphone","price":666}; //创建对象；
+		var jsonStr = JSON.stringify(json);       //转为JSON字符串
+		console.log(jsonStr);
+//		　　
+//		
+//		2、JS数组转JSON
+		//数组转json串
+		var arr = [1,2,3, { a : 1 } ];
+		var jsonStr1 = JSON.stringify(arr);
+		console.log(jsonStr1);
+		　　
+//		
+//		3、JS对象数组转JSON
+//		//数组转json串
+//		var arr = [1,2,3, { a : 1 } ];
+//		JSON.stringify( arr );
+//		
+//		4、JSON转JS数组  parse
+//		//json字符串转数组
+		var jsonStr = '[1,2,3,{"a":1}]';
+		var jsarr = JSON.parse(jsonStr);
+		alert(jsarr[0]);　　
+//		
+//		5、 JSON转JS对象
+		var jsonString ='{"bar":"property","baz":3}';
+		var jsObject = JSON.parse(jsonString);    //转换为json对象
+		alert(jsObject.bar);    //取json中的值
+</script>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+</html>
+<script type="text/javascript">
+	 function Person(name,age,sex) {
+      this.name=name;
+      this.sex=sex;
+      this.age=age;
+    }
+    Person.prototype.eat=function () {
+      console.log("人可以吃东西");
+    };
+    Person.prototype.sleep=function () {
+      console.log("人在睡觉");
+    };
+    Person.prototype.play=function () {
+      console.log("生活就是不一样的玩法而已");
+    };
+    function Student(score) {
+      this.score=score;
+    }
+    //改变学生的原型的指向即可==========>学生和人已经发生关系
+    Student.prototype=new Person("小明",10,"男"); //改变原型指向的
+    var student1 = new Student(130);
+    var student2 = new Student(140);
+    console.log(student1.name); // 数据都是小明，student自己的数据
+    student1.name= "wangba";// 这样修改起来很麻烦
+    console.log(student2.name);
+</script>

@@ -1,0 +1,46 @@
+<!--
+	作者：1173795632@qq.com
+	时间：2020-05-05
+	描述：事件选择器
+	click	keypress	submit	load
+	dblclick	keydown	change	resize
+	mouseenter	keyup	focus	scroll
+	mouseleave	 	blur	unload
+	hover
+	
+	click	: $(“div”).click();
+	trigger：触发事件，并且触发浏览器默认行为
+	triggerHandler：不触发浏览器默认行为
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>简单绑定事件的案例</title>
+	<style>
+		.bgc {
+			background-color: #ccc;
+		}
+	</style>
+	<script src="jquery-1.11.3.min.js"></script>
+	<script>
+		$(function () {
+			//jQuery的hover(mouseIn事件, mouseOut事件)，绑定两个事件
+			// $("p").hover(function(){
+			// 	$(this).addClass('bgc');
+			// },function(){
+			// 	$(this).removeClass('bgc');
+			// });
+
+			$("p").hover(function(){
+				$(this).toggleClass("bgc");
+			});
+		});
+	</script>
+</head>
+<body>
+	<p>
+		我是段落，前端与移动开发学院
+	</p>
+</body>
+</html>

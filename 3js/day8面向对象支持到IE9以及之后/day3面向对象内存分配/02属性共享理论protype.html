@@ -1,0 +1,54 @@
+<!--
+	作者：1173795632@qq.com
+	时间：2020-05-23
+	描述：原型protype 保存地就是地址（占用内存小，几乎没有）
+	原型：只分配一次内存，共享， 这样可以省内存 ，将其当做父类来看，但我们不能更改父类中的属性
+	属性搜索机制：现在自己的对象中，找到就不往下面找，找不到，就到原型中找
+	4：但基本不会更改原型中数据，一旦更改，则其他对方对象反问时，都会改变
+-->
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+</html>
+<script>
+    function Product(){
+        //属性
+        this.name='神仙';
+        // 属性
+        this.description = ''
+    }
+    Product.prototype={
+        name:'王书奎',
+        buy:function(){
+            alert('buy')
+        },
+        info:{
+        	name:'peter', // 该属性为父类的，不能被更改
+        	age:25
+        },
+        age:20
+    }
+    
+    //会拷贝一份，protype和construct都只是保存了一份地址
+    var p1 = new Product();
+    var p2 = new Product();
+    
+     /*原型对象中的属性和方法不会拷贝一份*/
+    console.log(p1.constructor);
+    console.log(p2.constructor)
+    
+    p1.buy()
+    Product.prototype.buy();
+    
+    //4 原型中数据被更改
+    p1.info.name = "jack";
+    console.log(p2.info.name); // jack，被更改了
+    
+    p1.age = 25;//p2未被更改 ，只是屏蔽掉p1中age属性
+    console.log(p2.age); // 20，未被更改，屏蔽掉了
+</script>

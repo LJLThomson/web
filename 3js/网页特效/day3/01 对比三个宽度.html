@@ -1,0 +1,100 @@
+<!--
+	作者：1173795632@qq.com
+	时间：2020-04-24
+	描述：
+	
+	<!--
+	作者：1173795632@qq.com
+	时间：2020-04-24
+	描述：
+	
+	client  可视区域    
+    offsetWidth:   width  +  padding  +  border     （披着羊皮的狼）  
+    clientWidth：   width  +  padding      不包含border  
+    scrollWidth:   大小是内容的大小 
+	
+-->
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            margin: 100px;
+            padding:20px;
+            border-left: 15px solid red;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    文字内容
+    文字内容
+    文字内容
+    文字内容
+    文字内容
+    文字内容
+    文字内容
+    文字内容
+    文字内容 文字内容
+    文字内容
+    文字内容
+    文字内容
+    文字内容
+    文字内容
+    文字内容
+    文字内容
+    文字内容 文字内容
+    文字内容
+    文字内容
+    文字内容
+    文字内容
+    文字内容
+    文字内容
+    文字内容
+    文字内容 文字内容
+    文字内容
+    文字内容
+    文字内容
+    文字内容
+    文字内容
+    文字内容
+    文字内容
+    文字内容
+    文字内容
+    文字内容
+    文字内容
+    文字内容
+    文字内容
+    文字内容
+    文字内容
+    文字内容
+    文字内容
+    文字内容
+    文字内容
+    文字内容
+    文字内容
+    文字内容
+    文字内容
+    文字内容
+    文字内容
+    文字内容
+    文字内容
+</div>
+</body>
+</html>
+<script>
+    var div = document.getElementsByTagName("div")[0];
+    console.log("offsetWidth:" + div.offsetWidth);  //  盒子自己的宽度
+    console.log("clientWidth:" +div.clientWidth);
+    console.log("scrollWidth:" +div.scrollWidth);
+    
+    console.log("offsetWidth:" + div.offsetHeight);  //  盒子自己的宽度
+    console.log("clientWidth:" +div.clientHeight);
+    console.log("scrollWidth:" +div.scrollHeight);
+</script>

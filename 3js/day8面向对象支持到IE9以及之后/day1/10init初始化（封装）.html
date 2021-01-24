@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+	</body>
+
+</html>
+<script>
+	function Product(name, price) {
+		/*属性 行为 可以为空或者给默认值*/
+		this.name = name
+		this.price = 1000;
+		this.description = '';
+		this.zhekou = ''
+		this.sales = ''
+		this.produceDate
+		/*我们的需求：自动计算打折后的价格*/
+		Object.defineProperty(this, "price", {
+			value: 5000000,
+			writable: false,
+		});
+		Object.defineProperty(this, "produceDate", {
+			get: function() {
+				return dateFormat(produceDate, 'yyyy年MM月dd日');
+			},
+			set: function(value) {
+				produceDate = value;
+			}
+		});
+
+		/*初始化函数的引入*/
+		/*我们将开发某个功能的初始化的工作都放在一起函数里面，用户只需要只要这一个工具就可以了*/
+		this.init = function() {  //必须添加this
+			this.bindDOM();
+			this.bindEvents();
+
+		};
+		this.bindDOM = function() {
+			console.log(1);
+		};
+		this.bindEvents = function() {
+			console.log(2);
+		};
+	}
+	var iphone = new Product();
+	iphone.init(); // 封装一下方法
+</script>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.box {
+				width: 350px;
+				height: 250px;
+				border: 1px solid #ccc;
+				margin: 100px auto;
+			}
+			
+			.dt {
+				padding-left: 10px;
+				line-height: 35px;
+				font-weight: 700;
+				color: #003366;
+			}
+			
+			.dd {
+				padding: 10px;
+			}
+			
+			.dd-t {
+				overflow: hidden;
+			}
+			
+			.icon {
+				width: 50px;
+				height: 50px;
+				float: left;
+				background: url(../../css/img/0.jpg) no-repeat;
+			}
+			
+			.yunshi {
+				width: 80px;
+				height: 13px;
+				display: inline-block;
+				/*//通过控制子盒子的黄色星星的宽度来压住父盒子的无色星星实现星级表现；*/
+				background: url(yunshi.png) no-repeat bottom;
+			}
+			
+			.star {
+				width: 0; //改变这个的宽度初始为0；
+				height: 13px;
+				position: absolute;
+				left: 0;
+				bottom: 0;
+				background: url(yunshi.png) no-repeat bottom;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="box">
+			<div class="dt">星座运势</div>
+			<div class="dd">
+				<div class="dd-t">
+					<div class="icon" id="ico">
+						<!--<img src="../../css/img/0.jpg" width="30px" height="30px"/>-->
+					</div>
+					<div class="right">
+						<select name="" id="sele">
+							<option value="0">白羊座03.21-04.19</option>
+							<option value="1">金牛座04.21-05.19</option>
+							<option value="2">天蝎座04.21-05.19</option>
+							<option value="3">双子座04.21-05.19</option>
+							<option value="4">哈哈座04.21-05.19</option>
+						</select>
+						<div>今日运势：
+							<span class="yunshi">
+                            	<span class="star" id="star"></span>
+							</span>
+						</div>
+
+					</div>
+				</div>
+				<div class="dd-b" id="content" style="text-indent: 2em;">这几天的财运都很强，但是危机总是在不知不觉中发生；这几天的财运都很强，但是危机总是在不知不觉中发生；这几天的财运都很强，但是危机总是在不知不觉中发生；这几天的财运都很强，但是危机总是在不知不觉中发生；</div>
+			</div>
+		</div>
+	</body>
+<script>
+    // 获取元素
+    function $(id){return  document.getElementById(id)};
+    var arr=[10,3,7,4,8];
+    var txtArr=["白羊座的内容","金牛座的内容","狮子座的内容"];
+    var sele=$('sele');
+    sele.onchange=function () {
+        $('ico').style.backgroundPosition='0 '+(-this.value*50)+'';
+        $('content').innerHTML=txtArr[this.value];
+        $('star').style.width=arr[this.value]*8+'px';
+    }
+</script>
+</html>

@@ -1,0 +1,36 @@
+<!--
+	作者：1173795632@qq.com
+	时间：2020-05-04
+	描述：CSS()
+	1css() 方法设置或返回被选元素的一个或多个样式属性。
+	
+	2设置属性值
+	与attr区别在于，这个是设置已有的CSS属性值，attr是设置style中值
+	("background-color","yellow")
+-->
+
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script>
+		//1 样式属性
+		$(document).ready(function() {
+			$("button").click(function() {
+				alert("背景颜色 = " + $("p").css("background-color"));
+			});
+		});
+		//2设置CSS属性
+		$("p").css("background-color","yellow");
+		//3 设置多个属性
+		$("p").css({"background-color":"yellow","font-size":"200%"});
+	</script>
+
+	<body>
+		<p style="background-color: yellow;width: 300px;"></p>
+	</body>
+
+</html>

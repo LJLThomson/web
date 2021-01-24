@@ -1,0 +1,36 @@
+<!--
+	作者：1173795632@qq.com
+	时间：2020-04-30
+	描述：Prototype 使用
+	主要解决：函数因为使用非常非常多，重复执行效率太低， 共同的 相同的 部分 提取出来在类中
+	但基本不会更改原型中数据，一旦更改，则其他对方对象反问时，都会改变
+-->
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+	</body>
+
+</html>
+
+<script>
+	function employee(name, jobtitle, born) {
+		this.name = name;
+		this.jobtitle = jobtitle;
+		this.born = born;
+	}
+	var fred = new employee("Fred Flintstone", "Caveman", 1970);
+	employee.prototype.salary = 200;
+	fred.salary = 20000; //屏蔽掉了父类中中salary属性，使用自己的属性
+	document.write(fred.salary);
+	var fred2 = new employee("boss", "china", 1973);
+	document.write(fred2.salary);
+	
+	
+	
+</script>

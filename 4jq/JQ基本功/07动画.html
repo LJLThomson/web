@@ -1,0 +1,70 @@
+<!--
+	作者：1173795632@qq.com
+	时间：2020-05-04
+	描述：animate
+	$(selector).animate({params},speed,callback);
+	可选的 speed 参数规定效果的时长。它可以取以下值："slow"、"fast" 或毫秒。
+
+	animate每个动画都是一个对象
+	
+	每个标签animate都是独立，使用队列功能
+	但是不同标签之间，animate动画可以同时运行
+-->
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script>
+		//		1操作多个属性
+		$("button").click(function() {
+			$("div").animate({
+				left: '250px',
+				opacity: '0.5',
+				height: '150px',
+				width: '150px'
+			});
+		});
+		//		2使用相对值
+		$("button").click(function() {
+			$("div").animate({
+				left: '250px',
+				height: '+=150px',
+				width: '+=150px'
+			});
+		});
+		//3使用预定义的值
+		//您甚至可以把属性的动画值设置为 "show"、"hide" 或 "toggle"：
+		$("button").click(function() {
+			$("div").animate({
+				height: 'toggle'
+			});
+		});
+		//		4使用队列功能
+		$("button").click(function() {
+			var div = $("div");
+			div.animate({
+				height: '300px',
+				opacity: '0.4'
+			}, "slow");
+			div.animate({
+				width: '300px',
+				opacity: '0.8'
+			}, "slow");
+			div.animate({
+				height: '100px',
+				opacity: '0.4'
+			}, "slow");
+			div.animate({
+				width: '100px',
+				opacity: '0.8'
+			}, "slow");
+		});
+	</script>
+
+	<body>
+	</body>
+
+</html>

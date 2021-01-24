@@ -1,0 +1,33 @@
+<!--
+	作者：1173795632@qq.com
+	时间：2020-05-09
+	描述：盒模型
+	分为W3C标准盒子 width+padding+border
+	IE怪异盒子 如box-sizing中图
+	IE width包含padding+border，类似于android中width
+	IE盒模型只会出现在IE5版本和IE6+的怪异模式中。
+	
+	由此引入了box-sizing
+	box-sizing: content-box|border-box|inherit:
+	content-box：内容的宽度	标准盒子
+	border-box： 宽度为border的宽度  怪异盒子
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		div {
+			width: 200px;
+			height: 200px;
+			padding: 50px;
+			margin: 100px auto;
+			background-color: yellow;
+		}
+	</style>
+</head>
+<body>
+	<div></div>
+</body>
+</html>

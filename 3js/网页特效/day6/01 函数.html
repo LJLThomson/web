@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+  //  自定义函数
+  fun();  // 调用函数    放到哪个位置都可以
+  function fun() {
+      console.log(3);
+  }
+
+  var fn = function() { //函数对象
+        console.log(4);
+  };
+  fn();   // 调用函数  必须再函数声明的下面 先声明后使用
+
+  var p = {
+  	name:"zhangsan",
+  	age:20
+  };
+  
+  var p1 = p; // 除了基本类型外，都是引用
+  console.log(p1.name);
+  
+  p1.name = "lisi";
+  console.log(p.name);
+</script>

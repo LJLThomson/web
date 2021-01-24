@@ -1,0 +1,42 @@
+<!--
+	作者：1173795632@qq.com
+	时间：2020-04-12
+	描述：绝对定位无视父辈的padding 属性， 从父盒子原点从发
+	
+-->
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			div{
+				width: 200px;
+				height: 200px;
+				border: 10px solid red;
+				padding: 100px;
+				padding-top: 150px;
+				position: relative;
+				margin: 100px;
+			}
+			p{
+				width: 100px;
+				height: 100px;
+				background-color: orange;
+							position: absolute;
+			top: 40px;
+			left: 40px;
+			}
+		</style>
+	</head>
+	<body>
+			<div>
+		字字字字字字字字字字字字字字字字字字字字字字字字字字字字字字字字字字字字字字字字字字字字字字字字字字字字字字字字字字字字
+		<p></p>
+	</div>
+	</body>
+</html>

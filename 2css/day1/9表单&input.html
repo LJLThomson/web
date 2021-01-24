@@ -1,0 +1,104 @@
+<!--
+	作者：1173795632@qq.com
+	时间：2020-04-10
+	描述：form 表单 action属性 method属性
+	action 表示表单提交到哪里
+	method表示用什么提交
+	
+	input: 行内元素
+	文本框
+	密码框
+	单选框
+	复选框
+	普通按钮
+	提交按钮
+	重置按钮
+	
+	select：
+	下拉列表
+	textarea（画出一个输入区域来）:
+	多行列表
+-->
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div>
+			<h3>欢迎注册本网站</h3>
+			<form action="1.php">
+				<!--文本框-->
+				<p>
+					请输入您的姓名
+					<input type="text" value="默认值" />
+				</p>
+				<!--密码-->
+				<p>
+					请输入您的密码
+					<input type="password" />
+				</p>
+				<!--单选框 name要一样才能互斥-->
+				<p>
+					请输入您的性别
+					<input type="radio" name="sex" /> 男
+					<input type="radio" name="sex" /> 女
+					<input type="radio" name="sex" /> 保密
+				</p>
+				<p>
+				请选择你的学历：
+				<input type="radio" name="xueli" /> 幼儿园
+				<input type="radio" name="xueli" /> 小学
+				<input type="radio" name="xueli" /> 初中
+				<input type="radio" name="xueli" /> 高中
+				<input type="radio" name="xueli" /> 大学
+				<input type="radio" name="xueli" /> 硕士
+				<input type="radio" name="xueli" /> 博士
+				<input type="radio" name="xueli" /> 更高
+			</p>
+			<!--多选复选框-->
+			<p>
+				请选择你的爱好
+				<input type="checkbox" name="hobby" /> 睡觉
+				<input type="checkbox" name="hobby" /> 吃饭
+				<input type="checkbox" name="hobby" />篮球
+			</p>
+						<p>
+				请选择你的技能：
+				<input type="checkbox" name="jineng" /> HTML
+				<input type="checkbox" name="jineng" /> CSS
+				<input type="checkbox" name="jineng" /> JS
+			</p>
+			<!--下拉列表选框-->
+			<p>
+				请选择你的籍贯
+				<select>
+					<option>北京</option>
+					<option>河北</option>
+					<option>武汉</option>
+				</select>
+			</p>
+			<!--多行文本框-->
+			<p>
+				签名:
+				<!--80列4行-->
+				<textarea cols="80" rows="4"></textarea>
+			</p>
+			<p>
+				普通按钮
+				<input type="button" value="我是一个普通按钮"/>
+				<button>与上面等价</button>
+			</p>
+			<p>
+				提交按钮：
+				<input type="submit" />
+			</p>
+			<p>
+				重置按钮：
+				<input type="reset" />
+			</p>
+			</form>
+		</div>
+	</body>
+</html>

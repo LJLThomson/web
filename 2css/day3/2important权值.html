@@ -1,0 +1,32 @@
+<!--
+	作者：1173795632@qq.com
+	时间：2020-04-10
+	描述：!important标记 权重无限大
+	1、 !important提升的是一个属性，而不是一个选择器
+	2、 !important无法提升继承的权重，该是0还是0 ，span继承性还是0
+	3、!important不影响就近原则
+-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		p{
+			color:red !important;
+			font-size: 100px ;
+		}
+		#para1{
+			color:blue;
+			font-size: 50px;
+		}
+		.spec{
+			color:green;
+			font-size: 20px;
+		}
+	</style>
+</head>
+<body>
+	<p id="para1" class="spec"><span>文字</span></p>
+</body>
+</html>

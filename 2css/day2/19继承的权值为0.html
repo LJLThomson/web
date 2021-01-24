@@ -1,0 +1,31 @@
+<!--
+	作者：1173795632@qq.com
+	时间：2020-04-10
+	描述：继承性权值为0
+	p 开始继承了div .mycolor的属性（只选择到div）  p的继承权值为0
+	p为元素选择器(标签选择器) 为1
+	总体权值：1
+-->
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+		div .mycolor{
+			font-size: 14px;
+			color: blue;
+		}
+		p{
+			color: red;	
+		}
+	</style>
+	</head>
+	<body>
+		<div >
+			<div class="mycolor">
+				<p>我的</p>
+			</div>
+		</div>
+	</body>
+</html>

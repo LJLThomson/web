@@ -1,0 +1,36 @@
+<!--
+	作者：1173795632@qq.com
+	时间：2020-05-23
+	描述：hasOwnProperty
+	hasOwnProperty() 方法
+	可以判定一个属性是存在于构造对象的实例上还是原型对象上。该 方法继承自 Object。
+	如果是实例对象—ture
+	如果是原型对象 – false
+
+-->
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>无标题文档</title>
+    <script>
+
+        //hasOwnProperty : 看是不是对象自身下面的属性
+        function Product(){
+            this.name='iphone'
+        }
+
+        Product.prototype={
+            age:100
+        }
+
+        var iphone = new Product()
+        console.log(iphone.hasOwnProperty('name'));//true
+        console.log(iphone.hasOwnProperty('age'));//false
+
+    </script>
+</head>
+
+<body>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!--
+	作者：1173795632@qq.com
+	时间：2020-04-18
+	描述：
+	数据	结论
+1数字类型	所有数字都是真，0是假
+2字符串	所有字符串都是真，’ ’串是假
+3对象	所有对象都是真，null是假
+4未定义	undefined是假，没有真
+-->
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			window.onload = function() {
+				//封装自己class类名
+				function getClass(id, classname) {
+					//如果浏览器支持，则直接返回
+					if(document.getElementsByClassName) {
+						if(id) {
+							var eleId = document.getElementById(id);
+							return eleId.getElementsByClassName(classname);
+						} else {
+							return document.getElementsByClassName(classname);
+						}
+					}
+					//					// 不支持的 浏览器
+					var arr = []; // 用于存放满足的数组
+					var dom = document.getElementsByTagName("*");
+					//alert(dom.length);
+					for(var i = 0; i < dom.length; i++) {
+						if(dom[i].className == classname) {
+							arr.push(dom[i]);
+						}
+					}
+					return arr;
+				}
+				console.log(getClass("demo").length);
+			}
+			}
+		</script>
+	</head>
+
+	<body>
+	</body>
+
+</html>

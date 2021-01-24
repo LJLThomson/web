@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+</html>
+<script>
+	//二者一致
+	var json = {"name":"iphone","price":666};
+	console.log(json.name);
+	var json2 = {name:"iphone",price:666};
+	console.log(json2.name);
+	
+	//添加属性 二者一致
+	json["myvar"] = 30;
+	console.log(json);
+	json2["myvar"] = 50;
+	console.log(json2);
+	
+	//添加属性
+	json.myvar2 = 40;
+	console.log(json);
+	json2.myvar2 = 40;
+	console.log(json2);
+</script>

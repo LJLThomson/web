@@ -1,0 +1,58 @@
+<!--
+	作者：1173795632@qq.com
+	时间：2020-04-11
+	描述：overflow:hidden小偏方
+	一个父亲不能被自己浮动的儿子，撑出高度。但是，只要给父亲加上overflow:hidden; 那么，父亲就能被儿子撑出高了。这是一个偏方。
+	1、通过overflow:hidden 而且还具有margin的特性，一举双得
+	怎么被撑起的？？ 儿子内容文字，overflow溢出，自行撑起了整个文字内容，div盒子也被撑起了，不然装不下
+-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.header{
+			width: 400px;
+			overflow: hidden;
+			border: 10px solid black;
+			margin-bottom: 100px;
+		}
+		.p1{
+			float: left;
+			width: 100px;
+			height: 150px;
+			background-color: red;
+		}
+		.p2{
+			float: left;
+			width: 100px;
+			height: 380px;
+			background-color: yellow;
+		}
+		.p3{
+			float: left;
+			width: 100px;
+			height: 120px;
+			background-color: blue;
+		}
+		.content{
+			width: 500px;
+			height: 100px;
+			background-color: pink;
+		}
+	</style>
+</head>
+<body>
+	<div class="header">
+		<p class="p1"></p>
+		<p class="p2"></p>
+		<p class="p3"></p>
+	</div>
+	<div class="content">wofsd</div>
+</body>
+</html>

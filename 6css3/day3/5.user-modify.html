@@ -1,0 +1,39 @@
+<!--
+	作者：1173795632@qq.com
+	时间：2020-05-14
+	描述：user-modify
+	read-only | read-write | read-write-plaintext-only
+        只读 | 内容可读写 | 内容可读写，但富粘贴的文本格式会丢失但富粘贴的文本格式会丢失
+        
+    	注意：read-write-plaintext-only
+    	样式会消失富文本，只会复制内容文字
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>零玖玖教育 - ljj.cn </title>
+    <meta name="author" content="零玖玖教育 - ljj.cn">
+    <meta name="copyright" content="零玖玖教育 - ljj.cn">
+    <meta name="description" content="零玖玖教育，是一家专注的前端开发培训的公司，是目前培训行业中最具口碑的机构。我们向学员提供了JavaScript、nodeJs、AngularJS、jQuery、HTML+CSS、HTML5+CSS3，移动端等课程。">
+    <style>
+        div{
+            width: 400px;
+            height: 300px;
+            border:solid 2px red;
+            -webkit-user-modify: read-write-plaintext-only;
+        }
+        /*
+            -webkit-user-modify
+            read-only | read-write | read-write-plaintext-only
+                只读 | 内容可读写 | 内容可读写，但富粘贴的文本格式会丢失
+
+        */
+
+    </style>
+</head>
+<body>
+    <!--<div class="box" contenteditable="true"></div>-->
+    <div class="box"></div>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!--
+	作者：1173795632@qq.com
+	时间：2020-05-21
+	描述：prototype
+	类似于java中父类，
+	当子类已经有了改方法或者属性，则子类调用时，使用子类的，
+	当子类没有改方法或者属性时，调用父类中方法或属性
+-->
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+	</body>
+
+</html>
+<script>
+	var arr = []; // 数组
+	arr.run = function() { //  自定义方法
+		alert("酸辣土豆丝");
+	}
+	//arr.run();
+	var arr1 = []; // 也是一个数组
+	//arr1.run();  // 可以吗
+	//会有一个问题
+	//只要是 数组 我们能不能都有run 这个方法呢
+	//这个时候我们可以吧 prototype  原型
+	Array.prototype.run = function() { // 只要是数组，都会调用这个方法
+		alert("散啦土豆");
+	}
+	var demo = [];
+	demo.run();
+	var demo1 = [];
+	demo1.run();
+
+
+	function Person(name, age) { //  构造函数
+		this.name = name; // 只写属性
+		this.age = age;
+	}
+	Person.prototype.showName = function() { // 用的共同的父亲
+		alert("我的名字是" + this.name);
+	}
+	Person.prototype.showAge = function() {
+		alert("我的名字是" + this.age);
+	}
+	var demo = new Person("刘德华1", 15);
+	var demo1 = new Person("刘德华", 15);
+	demo.showName();
+	alert(demo.showName === demo1.showName); //一模一样，都是window中属性，父类
+</script>

@@ -1,0 +1,60 @@
+<!--
+	作者：1173795632@qq.com
+	时间：2020-04-15
+	描述：判断用户输入事件
+	  正常浏览器  :    oninput  
+  	Ie 678  支持的  ： onpropertychange   
+-->
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			.search {
+				width: 300px;
+				height: 30px;
+				margin: 100px auto;
+				position: relative;
+			}
+			
+			.search input {
+				width: 200px;
+				height: 25px;
+			}
+			
+			.search label {
+				font-size: 12px;
+				color: #ccc;
+				position: absolute;
+				top: 8px;
+				left: 20px;
+				cursor: text;
+			}
+		</style>
+		<script>
+			window.onload = function() {
+//				创建一个方法,用于获取id，方法名为￥
+				function $(id) {
+					return document.getElementById(id);
+				}
+				$("txt").oninput = $("txt").onpropertychange = function() {
+					if(this.value == " ") {
+						$("message").style.display = "block";
+					} else {
+						$("message").style.display = "none";
+					}
+				}
+			}
+		</script>
+	</head>
+
+	<body>
+		<div class="search">
+			<input type="text" id="txt" />
+			<label for="txt" id="message">必败的国际大牌</label>
+		</div>
+	</body>
+
+</html>

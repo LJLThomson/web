@@ -1,0 +1,42 @@
+<!--
+	作者：1173795632@qq.com
+	时间：2020-05-14
+	描述：rotateZ
+	默认Z轴转
+-->
+/<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>零玖玖教育 - ljj.cn </title>
+    <meta name="author" content="零玖玖教育 - ljj.cn">
+    <meta name="copyright" content="零玖玖教育 - ljj.cn">
+    <meta name="description" content="零玖玖教育，是一家专注的前端开发培训的公司，是目前培训行业中最具口碑的机构。我们向学员提供了JavaScript、nodeJs、AngularJS、jQuery、HTML+CSS、HTML5+CSS3，移动端等课程。">
+    <style>
+        .box{
+            width: 200px;
+            height: 200px;
+            background-color: yellowgreen;
+            margin: 30px auto;
+            transition: .35s;
+
+            /*
+                旋转：
+                    单位 ： 角度 （deg）
+                        rotate  如果没去置顶xyz，默认为 z轴
+                        rotateX \ Y \ Z
+
+            */
+        }
+        .box:hover{
+            transform: rotateZ(90deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .wrap {
+            width: 330px;
+            height: 30px;
+            margin: 100px auto 0;
+            background-image: url(imgs/bg.jpg);
+            padding-left: 10px;
+        }
+
+        .wrap li {
+            float: left;
+            width: 100px;
+            height: 30px;
+            margin-right: 10px;
+            position: relative;
+        }
+		.wrap a{
+			background: yellow;
+		}
+    </style>
+    <script src="jquery-1.11.1.min.js"></script>
+</head>
+<body>
+    <div class="wrap">
+    	   <!--<ul>
+                <li><a href="#">一级菜单1</a></li>
+                <li><a href="#">一级菜单2</a></li>
+                <li><a href="#">一级菜单3</a></li>
+            </ul>-->
+        <ul>
+            <li>
+                <a href="#">一级菜单1</a>
+                <ul>
+                    <li><a href="#">一级菜单1</a></li>
+                    <li><a href="#">一级菜单2</a></li>
+                    <li><a href="#">一级菜单3</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">一级菜单1</a>
+                <ul>
+                    <li><a href="#">二级菜单1</a></li>
+                    <li><a href="#">二级菜单2</a></li>
+                    <li><a href="#">二级菜单3</a></li>
+                </ul>
+            </li>
+            <li>
+            <a href="#">一级菜单1</a>
+            <ul>
+                <li><a href="#">三级菜单1</a></li>
+                <li><a href="#">三级菜单2</a></li>
+                <li><a href="#">三级菜单3</a></li>
+            </ul>
+        </li>
+        </ul>
+    </div>
+</body>
+</html>

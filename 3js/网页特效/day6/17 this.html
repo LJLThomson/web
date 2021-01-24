@@ -1,0 +1,44 @@
+<!--
+	作者：1173795632@qq.com
+	时间：2020-04-30
+	描述：this与new ————对象本身，隐含的
+	1、在全局调用方法，this指window
+	2、在对象中调用方法，this指对象本身
+	————所以new作用：new 关键字可以让 this  指向新的对象 
+-->
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    function fun() {    // this 指向的是 函数的调用者 或者是 事件的调用者
+        alert(this);
+    }
+    fun();   //   这个的this 指向的是 window
+
+    function fn() {
+        alert(this);
+    }
+    new fn();  // 添加了  new 的函数 this 指向的是 新的对象，与下面等价
+    //var nm = fn();
+    function again() {
+        this.x = 10;  //  x  window
+        console.log(this);
+    }
+    again(); // x window
+    console.log(window.x);
+    
+    function person() {
+        this.x = 20;
+    }
+    var demo =             new person();
+    var demo1 =            new person();
+     //  实例 对象   吃的苹果     类
+    console.log(demo.x);
+</script>

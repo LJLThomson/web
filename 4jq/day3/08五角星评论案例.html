@@ -1,0 +1,72 @@
+<!--
+	作者：1173795632@qq.com
+	时间：2020-05-06
+	描述：
+	$(document).ready(function() {   
+    $("#test").click(function() {   
+        $(this).find("p").hide().end().hide();    //end()回到this对象
+    });   
+});  
+点击id为test的div时，首先找到div里边的p标签，将其隐藏。接下来使用end()方法结束了对p标签的引用，
+此时返回的是#test(jQuery对象)，从而后边的hide()方法隐藏了div。这样相信大家已经理解了jQuery中end()方法。
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>五角星评论案例</title>
+	<style>
+		* { padding: 0; margin: 0; }
+		.comment {
+			font-size: 40px;
+			color: red;		
+			letter-spacing: 0px;	
+			/*word-spacing: 0px;*/
+		}
+		.comment li {
+			float: left;
+		}
+		ul { list-style: none;}
+	</style>
+	<script src="jquery-1.11.3.min.js"></script>
+	<script>
+		$(function(){
+			var wjx_none = '☆',
+				wjx_sel  = '★';
+			$(".comment li").mouseenter(function(){
+				//鼠标移入: 自己和前面的兄弟变实心，其余变空心
+				$(this).text(wjx_sel).prevAll().text(wjx_sel).end().nextAll().text(wjx_none);
+			}).click(function(){
+				//鼠标点击后，把自己添加clicked类，其余的清除clicked类
+				$(this).addClass('clicked').siblings().removeClass('clicked');
+			});
+
+			//当鼠标移开评分控件时，实心显示到被点击的五角星的上
+			$(".comment").mouseleave(function(){
+				$(".comment li").text(wjx_none);//先给所有五角星都变空心
+				//end回到.clicked对象
+				$(".clicked").text(wjx_sel).prevAll().text(wjx_sel).end().nextAll().text(wjx_none);
+			});
+
+			$("li").click(function(){
+				$(this).data("clicked", true);
+				
+				// if($(this).data("clicked") === true ) {
+
+				// }
+			});
+		});
+
+		
+	</script>
+</head>
+<body>
+	<ul class="comment">
+		<li>☆</li>
+		<li ts="122" class="ss">☆</li>
+		<li>☆</li>
+		<li>☆</li>
+		<li>☆</li>
+	</ul>
+</body>
+</html>

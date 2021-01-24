@@ -1,0 +1,36 @@
+<!--
+	作者：1173795632@qq.com
+	时间：2020-04-11
+	描述：display块状元素转为行内元素
+	display: inline; 那么，这个标签将立即变为行内元素。此时它和一个span无异：
+	
+	行内元素限制：
+	1、此时这个div不能设置宽度、高度，文本自身宽度
+	2、此时这个div可以和别人并排了，行内
+-->
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			div{
+				display: inline;
+				background-color: pink;
+				width: 500px;
+				height: 500px;
+			}
+			h1{
+				background-color: greenyellow;
+				display: inline;
+				font-size: 20px;
+				font-weight: normal;
+			}
+		</style>
+	</head>
+	<body>
+		<div>我是一个div</div>
+		<div>我是一个div</div>
+		<h1>我</h1><h1>爱</h1><h1>你</h1>
+	</body>
+</html>

@@ -1,0 +1,40 @@
+<!--
+	作者：1173795632@qq.com
+	时间：2020-04-10
+	描述：>
+	IE7开始兼容
+	div>p 选取地就是div下的p
+-->
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			div>p {
+				color: red;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div>
+			<ul>
+				<li>
+					<p>我是div的重孙子</p>
+				</li>
+			</ul>
+		</div>
+		<div>
+			<p>我是div的儿子</p>
+		</div>
+		<p>我是div的儿子</p>
+		<div>
+			<div>
+				<p>我是div的儿子</p>
+			</div>
+		</div>
+	</body>
+
+</html>

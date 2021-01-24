@@ -1,0 +1,40 @@
+<!--
+	作者：1173795632@qq.com
+	时间：2020-04-11
+	描述：标准文档流div
+	1、标准文档div，高度可以靠内容支撑起高度
+	2、浮动时，不能靠内容支撑起高度，毕竟都不在一个层面上
+	如果要浮动时，div被内容支撑起高度，需要设置clear:both
+-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.header{
+			width: 980px;
+			margin: 0 auto;
+		}
+		/*.header .logo{
+			float: left;
+		}*/
+		.content{
+			height: 200px;
+			background-color: pink;
+		}
+	</style>
+</head>
+<body>
+	<div class="header">
+		<div class="logo">
+			<h1><img src="../img/logo.png" /></h1>
+		</div>
+	</div>
+	<div class="content"></div>
+</body>
+</html>

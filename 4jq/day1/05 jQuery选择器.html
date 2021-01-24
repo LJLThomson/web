@@ -1,0 +1,79 @@
+<!--
+	作者：1173795632@qq.com
+	时间：2020-04-30
+	描述：js选择器
+	$(“#demo”)	选择id为demo的第一个元素	$(“#demo”).css(“background”,”red”)
+	$(“.liItem”)	选择所有类名（样式名）为liItem的元素	$(“.liItem”). css(“background”,”red”);
+	$(“div”)	选择所有标签名字为div的元素	$(“div”). css(“background”,”red”);
+	$(“*”)	选择所有元素
+	少用或配合其他选择器来使用	$(“*”). css(“background”,”red”)
+	$(“.liItem,div”)	选择多个指定的元素，这个地方是选择出了 .liItem元素和div元素	$(“.liItem,div”). css(“background”,”red”)
+-->
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        li {
+            /*color: red;*/
+            font-size: 18px;
+        }
+    </style>
+    <script src="jquery-1.11.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // # id选择器
+            // js dom.style.backgroundColor = "";
+            // 设置被选择元素的样式属性
+            //$("#b03").css("background","red");
+            // 获取被选择元素的样式属性
+            /*var bg = $("#b03").css("color");
+            console.log(bg);*/
+
+            /*var bg = $("#b03").css("font-size");
+            console.log(bg);*/
+
+            // 类选择器
+            /*$(".liItem").css("background","red");*/
+
+            // 标签选择器
+            //$("li").css("background","red");
+
+            // jQuery的一个 特点：隐式迭代
+
+            // * 通配符选择器
+            //$("*").css("font-size","20px");
+
+            // , 并集选择器
+            //$(".liItem,div").css("background","blue");
+
+            $("#demo").css("background","red");
+            /*$("#demo").css({
+                "color":"red",
+                "font-size" : ""
+            });*/
+
+            // 交集选择器 --一般用于class
+            $("li#b03").css("font-size","20px");
+
+        });
+    </script>
+</head>
+<body>
+<ul>
+    <li class="liItem aa" id="demo">兄弟很多1</li>
+    <li>兄弟很多2</li>
+    <li id="b03">兄弟很多3</li>
+    <li>兄弟很多4</li>
+    <li class="liItem">兄弟很多5</li>
+    <li id="demo1">兄弟很多6</li>
+    <li>兄弟很多7</li>
+    <li class="liItem">兄弟很多8</li>
+</ul>
+
+<div class="aa">
+    我是div的内容
+</div>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!--
+	作者：1173795632@qq.com
+	时间：2020-04-11
+	描述：background属性 5个属性
+	background属性和border一样，是一个综合属性：
+1background:red url(1.jpg) no-repeat 100px 100px fixed;
+等价于：
+1background-color:red;
+2background-image:url(1.jpg);
+3background-repeat:no-repeat;
+4background-position:100px 100px;
+5background-attachment:fixed; 默认不固定
+-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		div{
+			width: 500px;
+			height: 500px;
+			background: blue url(../img/wuyifan.jpg) no-repeat 100px 100px;
+		}
+		span{
+			display: block;
+			width: 59px;
+			height: 60px;
+			background: url(images/taobao.png) no-repeat 0 -133px;
+		}
+	</style>
+</head>
+<body>
+	<div></div>
+	<span></span>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!--
+	作者：1173795632@qq.com
+	时间：2020-04-11
+	描述：
+	header应该与content是两个盒子，因为div没有高度，造成塌陷
+	解决方案：header和content都设置height
+-->
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0 auto;
+				padding: 0;
+			}
+			.header{
+				width: 980px;
+				margin: 0 auto;
+			}
+			.header .logo{
+				float: left;
+				width: 150px;
+				height: 100px;
+				background-color: gold;
+			}
+			.header .nav{
+				float: left;
+				width: 400px;
+				height: 400px;
+				background-color: green;
+				margin-left: 50px;
+			}
+			.content {
+				width: 980px;
+				margin: 0 auto;
+			}
+			.content .ad{
+				float: left;
+				width: 120px;
+				height: 600px;
+				background-color: gray;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="header">
+			<div class="logo">logo</div>
+			<div class="nav">nav</div>
+		</div>
+		<div class="content">
+			<div class="ad">我是内容中的广告</div>
+		</div>
+	</body>
+</html>

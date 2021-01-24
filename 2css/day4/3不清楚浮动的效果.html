@@ -1,0 +1,47 @@
+<!--
+	作者：1173795632@qq.com
+	时间：2020-04-11
+	描述：不清楚浮动效果
+	div：没有自己的宽度和高度，不能给自己的浮动孩子，一个容器，造成塌陷
+	解决方案：增加盒子width和height
+-->
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			/*div{
+				width: 500px;
+				height: 400px;
+				background-color: yellowgreen;
+			}*/
+			li{
+				float: left;
+				width: 90px;
+				height: 40px;
+				background-color: gold;
+				/*文本居中*/
+				text-align: center;
+				line-height: 40px;
+			}
+		</style>
+	</head>
+	<body>
+		<div>
+			<ul>
+				<li>HTML</li>
+				<li>CSS</li>
+				<li>JS</li>
+				<li>HTML5</li>
+			</ul>
+		</div>
+		<div>
+			<ul>
+				<li>学习方法</li>
+				<li>英语水平</li>
+				<li>面试技巧</li>
+			</ul>
+		</div>
+	</body>
+</html>

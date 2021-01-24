@@ -1,0 +1,43 @@
+<!--
+	作者：1173795632@qq.com
+	时间：2020-04-28
+	描述：外部（使用<link>）和内嵌（使用<style>）样式表中的样式
+	
+	demo.style.left 只能获取行内样式
+核心： 我们怎么才能得到内嵌或者外链的样式呢？  
+  	1.   obj.currentStyle   ie  opera  常用
+外部（使用<link>）和内嵌（使用<style>）样式表中的样式（ie和opera）
+	2 .window.getComputedStyle("元素", "伪类")     w3c 
+	3 兼容写法 ：
+    	我们这个元素里面的属性很多， left  top  width  ===
+ 	我们想要某个属性， 就应该 返回改属性，所有继续封装 返回当前样式的 函数。
+-->
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        div {
+            width: 100px;
+            height: 200px;
+            background-color: pink;
+            left: 10px;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+<div id="demo"></div>
+</body>
+</html>
+<script>
+    var demo = document.getElementById("demo");
+//  console.log(demo.style.left);  // 得到的是空值   只能取行内
+//    console.log(demo.currentStyle.left);  // ie opera这么写
+    console.log(window.getComputedStyle(demo,null).left); //w3c标准
+     console.log(window.getComputedStyle(demo,null)["left"]); //w3c标准
+     //   window.getComputedStyle(demo,null).left = 500 + "px";// 错误 css样式只加载一次
+     demo.style.width = 500 + "px"; // 也会影响到对象的宽度属性值
+     console.log(window.getComputedStyle(demo,null)["width"]);//500px
+</script>

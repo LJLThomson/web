@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script>
+		//javascript中方法
+		var liobj = document.createElement("li");
+//		方式一
+		var link1 = $('<a>', {
+			text: "baidu",
+			href: "http://www.baidu.com",
+			target: "_blank",
+			title: "goto baidu"
+		});
+
+		link1.appendTo('body');
+//		方式二：
+		var link2 = $('<a>baidu</a>').attr({
+			href: "http://www.baidu.com",
+			target: "_blank",
+			title: "goto baidu"
+		});
+
+		link2.appendTo('body');
+	</script>
+
+	<body>
+	</body>
+
+</html>

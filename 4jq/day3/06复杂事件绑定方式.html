@@ -1,0 +1,82 @@
+<!--
+	作者：1173795632@qq.com
+	时间：2020-05-05
+	描述：复杂事件
+	bind  ——————绑定多个事件  $(selector).bind(event,data,function,map)
+	delegate—————给父元素绑定一个事件，子元素也触发应有的事件 $(selector).delegate(childSelector,event,data,function)
+	on————能代替bind和delegate方法 $(selector).on(event,childSelector,data,function) 
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>复杂绑定事件方式</title>
+		<script src="jquery-1.11.3.min.js"></script>
+		<script>
+			$(function() {
+				// $("#J_btn_bind").bind("click",function(){
+				// 	alert("bind方式 绑定");
+				// });
+
+//				$("#J_btn_bind").bind({
+//					click: function() {
+//						alert("bind方式 绑定");
+//					},
+//					mouseenter: function() {
+//						$(this).css("background-color", "red");
+//					}
+//				});
+				
+				//可代替bind方法
+				$("#J_btn_bind").on({
+					click: function() {
+						alert("bind方式 绑定");
+					},
+					mouseenter: function() {
+						$(this).css("background-color", "red");
+					}
+				});
+
+				//			$(".cities").delegate('li', 'click', function(event) {
+				//				alert($(this).text());
+				//			});
+				//可代替delegate方法
+				$(".cities").on('click','li', function(event) {
+					alert($(this).text());
+				});
+
+				$("#J_btn_on").on("click", function() {
+					$(".cities").append('<li>added by dynamic</li>')
+				});
+
+				$("#J_btn_offAll").on("click", function() {
+					$("#J_btn_bind").off("click","mouseenter")
+					$("#J_btn_on").off("click");
+
+					$(".cities").undelegate('click');
+
+					$("#J_btn_bind").unbind();
+				});
+			});
+		</script>
+	</head>
+
+	<body>
+		<input type="button" id="J_btn_bind" value="bind方式绑定事件">
+
+		<input type="button" id="J_btn_on" value="on方式绑定事件">
+
+		<input type="button" id="J_btn_offAll" value="解除绑定事件">
+
+		<ul class="cities">
+			<li>传智前端1</li>
+			<li>传智前端2</li>
+			<li>传智前端3</li>
+			<li>传智前端4</li>
+			<li>传智前端5</li>
+		</ul>
+
+	</body>
+
+</html>

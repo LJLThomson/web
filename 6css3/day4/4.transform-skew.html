@@ -1,0 +1,46 @@
+<!--
+	作者：1173795632@qq.com
+	时间：2020-05-14
+	描述：skew斜切
+	transform:skew(<angle> [,<angle>]);
+包含两个参数值，分别表示X轴和Y轴倾斜的角度，如果第二个参数为空，则默认为0，参数为负表示向相反方向倾斜。
+
+skewX(<angle>);表示只在X轴(水平方向)倾斜。
+skewY(<angle>);表示只在Y轴(垂直方向)倾斜。
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>零玖玖教育 - ljj.cn </title>
+    <meta name="author" content="零玖玖教育 - ljj.cn">
+    <meta name="copyright" content="零玖玖教育 - ljj.cn">
+    <meta name="description" content="零玖玖教育，是一家专注的前端开发培训的公司，是目前培训行业中最具口碑的机构。我们向学员提供了JavaScript、nodeJs、AngularJS、jQuery、HTML+CSS、HTML5+CSS3，移动端等课程。">
+    <style>
+        .box{
+            width: 200px;
+            height: 200px;
+            background-color: yellowgreen;
+            margin: 30px auto;
+            transition: .35s;
+
+            /*
+                斜切：
+                    单位：角度  支持正负值
+                    skew 如果没写第二个参数，默认为0
+                    skewX \ Y
+
+            */
+        }
+        .box:hover{
+            transform: skew(45deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+
+
+    </div>
+</body>
+</html>

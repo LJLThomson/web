@@ -1,0 +1,39 @@
+<!--
+	作者：1173795632@qq.com
+	时间：2020-04-30
+	描述：为标签设置属性
+-->
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	  .on{border-bottom:1px solid #0f0;}
+      .current{background:#ccc;color:#f00;}
+	</style>
+</head>
+<body>
+    <p id="text" class="text" align="center" data-type="title">文本</p>
+    <input type="text" name="user" value="user" id="user" validate="true">
+	<script>
+        var p=document.getElementById("text");
+        console.log(p.id); //获取id
+        console.log(p.className) // 获取class，除了class，其他标准属性可以直接获取
+        
+        var user=document.getElementById("user");  // 找不到就会为null
+        console.log(p.getAttribute("class"));  //p.className
+//      console.log(user.validate);  //自定义的属性，获取不带，需要getAttribute
+        console.log(user.getAttribute("validate"));
+        
+        
+        // 给p设置一个data-color的属性
+        p.setAttribute("data-color","red");
+        // 给input设置一个isRead的属性
+        user.setAttribute("isRead","false");
+        
+        // 删除p上的align属性
+        p.removeAttribute("align");
+	</script>
+</body>
+</html>

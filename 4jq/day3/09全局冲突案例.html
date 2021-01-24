@@ -1,0 +1,38 @@
+<!--
+	作者：1173795632@qq.com
+	时间：2020-05-06
+	描述：全局冲突 以及重新为jQuery规定新的名称
+	在JQuery中污染了两个变量 $和jQuery
+	
+	使用 noConflict() 方法为 jQuery 变量规定新的名称：
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>冲突的案例</title>
+	<script>
+		$ = {
+			show: function (argument) {
+				console.log("my $");
+			}
+		}
+	</script>
+	<script src="jquery-1.11.3.min.js"></script>
+	<script>
+		var myJQuery = $.noConflict(); // 规定新的名称
+		jQuery(document).ready(function(){
+			jQuery("div").css("color","red");
+			// $("div").css("color","red"); //$就不能用了
+		});
+
+		$.show("sdf");
+
+	</script>
+</head>
+<body>
+	<div>
+		sfadfsdf
+	</div>
+</body>
+</html>

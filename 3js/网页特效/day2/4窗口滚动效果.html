@@ -1,0 +1,45 @@
+<!--
+	作者：1173795632@qq.com
+	时间：2020-04-24
+	描述：scrollTop     被卷去的头部
+	 它就是当你滑动滚轮浏览网页的时候网页隐藏在屏幕上方的距离
+	 
+	 window.onscroll  页面滚动效果
+	 
+	 我们学习一个事件 ：  页面滚动效果  
+window.onscroll = function() { 页面滚动语句  }
+谷歌浏览器 和没有声明 DTD  <DOCTYPE	> ：  
+  document.body.scrollTop;  
+火狐 和其他浏览器   
+  document.documentElement.scrollTop;
+ ie9+  和 最新浏览器   都认识
+  window.pageXOffset;     pageYOffset  （scrollTop）
+  
+pageXOffset 和 pageYOffset 属性返回文档在窗口左上角水平和垂直方向滚动的像素。
+pageXOffset 设置或返回当前页面相对于窗口显示区左上角的 X 位置。pageYOffset 设置或返回当前页面相对于窗口显示区左上角的 Y 位置。
+pageXOffset 和 pageYOffset 属性相等于 scrollX 和 scrollY 属性。
+-->
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        body {
+            height: 3000px;
+        }
+    </style>
+</head>
+<body>
+</body>
+</html>
+<script>
+    window.onscroll = function() {
+        console.log(11);
+        var scrollTop = window.pageYOffset || document.documentElement.scrollTop
+        || document.body.scrollTop || 0;
+        // document.title =  document.body.scrollTop;
+        document.title = scrollTop;
+        console.log(scrollTop);
+    }
+</script>

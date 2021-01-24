@@ -1,0 +1,50 @@
+<!--
+	作者：1173795632@qq.com
+	时间：2020-05-04
+	描述：first last eq
+	三个最基本的过滤方法是：first(), last() 和 eq()，它们允许您基于其在一组元素中的位置来选择一个特定的元素。
+	first: 方法返回被选元素的首个元素。
+	last:返回被选元素的最后一个元素。
+	eq:回被选元素中带有指定索引号的元素
+	:gt(index)
+	:lt(index)	Index是从0开始的一个数字，选择小于index 的元素
+	
+	filter ————自定义过滤
+	filter() 方法允许您规定一个标准。不匹配这个标准的元素会被从集合中过滤掉，匹配的元素会被返回。
+下面的例子返回带有类名 "url" 的所有 <p> 元素：
+	not  not() 方法返回不匹配标准的所有元素。
+	提示：not() 方法与 filter() 相反。
+-->
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script>
+		$(document).ready(function() {
+			$("div p").first();
+		});
+
+		$(document).ready(function() {
+			$("div p").last();
+		});
+
+		$(document).ready(function() {
+			$("p").eq(1);
+		});
+
+		$(document).ready(function() {
+			$("p").filter(".url");
+		});
+
+		$(document).ready(function() {
+			$("p").not(".url");
+		});
+	</script>
+
+	<body>
+	</body>
+
+</html>

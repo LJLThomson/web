@@ -1,0 +1,47 @@
+<!--
+	作者：1173795632@qq.com
+	时间：2020-05-04
+	描述：同胞 ————水平遍历
+	在 DOM 树中水平遍历
+	有许多有用的方法让我们在 DOM 树进行水平遍历：
+	siblings() 方法返回被选元素的所有同胞元素。
+	next()  返回被选元素的下一个同胞元素
+	nextAll() 返回被选元素的所有跟随的同胞元素。
+	nextUntil() 介于两个给定参数之间的所有跟随的同胞元素。
+	prev() prev(), prevAll() 以及 prevUntil() 方法的工作方式与上面的方法类似，只不过方向相反而已
+	prevAll()  
+	prevUntil()
+-->
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script>
+		//1
+		$(document).ready(function() {
+			$("h2").siblings();
+		});
+		//1
+		$(document).ready(function() {
+			$("h2").siblings("p");
+		});
+		//2
+		$(document).ready(function() {
+			$("h2").next();
+		});
+		//3
+		$(document).ready(function() {
+			$("h2").nextAll();
+		});
+		$(document).ready(function() {
+			$("h2").nextUntil("h6");
+		});
+	</script>
+
+	<body>
+	</body>
+
+</html>

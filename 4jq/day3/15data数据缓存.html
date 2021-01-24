@@ -1,0 +1,25 @@
+<!--
+	作者：1173795632@qq.com
+	时间：2020-05-06
+	描述：
+	1.5.2.data()跟.attr() 方法的区别：
+	1.获取数据的时候，attr方法需要传入参数，data方法可以不传入参数，这时候获取到的是一个js对象，即使没有任何data属性。
+	. 获取到的数据类型不同，attr方法获取到的数据类型是字符串(String)，data方法获取到的是相应的类型。
+	3. data方法获取到数据之后，我们使用一个对象来接收它，那么就可以直接操作(设置值或获取值)这个对象，而attr方法不可以。
+	并且通过这种方式，要比.data(key,value)的方式更高效！
+	4. data-attribute属性会在页面初始化的时候放到jQuery对象，被缓存起来，而attr方法不会。
+	
+	html里面的data 属性，例如：data-ROLE，jQuery获取的时候用：$(“div”).data(“role”);
+	$(“div”).data(“UPCASE”,123);  //设置值
+	$(“div”).data(“UPCASE”); //获取值
+-->
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+</html>

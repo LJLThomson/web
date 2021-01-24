@@ -1,0 +1,35 @@
+<!--
+	作者：1173795632@qq.com
+	时间：2020-04-11
+	描述： 有块状元素宽高属性，又有行内属性
+	当我们必须设置宽高又必须并排时，标准流做不到，就必须脱离标准流
+	css中一共有三种手段，使一个元素脱离标准文档流：
+1） 浮动
+2） 绝对定位
+3） 固定定位
+-->
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.box1{
+				float: left;
+				width: 300px;
+				height: 400px;
+				background-color: yellowgreen;
+			}
+			.box2{
+				float: left;
+				width: 400px;
+				height: 400px;
+				background-color: skyblue;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box1"></div>
+		<div class="box2"></div>
+	</body>
+</html>

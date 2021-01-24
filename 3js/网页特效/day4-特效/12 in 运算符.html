@@ -1,0 +1,36 @@
+<!--
+	作者：1173795632@qq.com
+	时间：2020-04-28
+	描述：in运算符
+	in运算符也是一个二元运算符，但是对运算符左右两个操作数的要求比较严格。
+	in运算符要求第1个（左边的）操作数必须是字符串类型或可以转换为字符串类型的其他类型，而第2个（右边的）
+	操作数必须是数组或对象。只有第1个操作数的值是第2个操作数的属性名，才会返回true，否则返回false
+-->
+
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    var json = {name: "刘德华",age : 55};
+    
+    for(obj in json){
+    	console.log(obj);
+    	console.log(json[obj]);
+    }
+    // in 可以用用来判断 json 里面有没有某个属性
+    if("andy" in json)
+    {
+        console.log("yes");  // 返回的是 yes
+    }
+    else
+    {
+        console.log("no");
+    }
+</script>
